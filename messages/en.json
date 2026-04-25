@@ -1,0 +1,147 @@
+{
+  "common": {
+    "brandName": "Yundo",
+    "nav": {
+      "shop": "Shop",
+      "about": "About",
+      "cart": "Cart",
+      "menu": "Menu",
+      "closeMenu": "Close menu"
+    },
+    "footer": {
+      "shopHeading": "Shop",
+      "bowls": "Bowls",
+      "cups": "Cups",
+      "vases": "Vases",
+      "plates": "Plates",
+      "aboutHeading": "About",
+      "ourStory": "Our Story",
+      "theCraft": "The Craft",
+      "studio": "Studio",
+      "contactHeading": "Contact",
+      "email": "hello@yundoceramics.com",
+      "instagram": "Instagram",
+      "location": "Seoul, South Korea",
+      "newsletterHeading": "Newsletter",
+      "newsletterDescription": "Stories from our studio, new releases, and seasonal inspirations.",
+      "emailPlaceholder": "Your email",
+      "subscribe": "Subscribe",
+      "subscribeSuccess": "Thank you for subscribing!",
+      "subscribeError": "Something went wrong. Please try again.",
+      "copyright": "© 2026 Yundo Ceramics",
+      "privacy": "Privacy",
+      "terms": "Terms"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Slow ceramics from a Seoul studio.",
+      "subtitle": "Handcrafted vessels rooted in Korean tradition, made for modern rituals.",
+      "cta": "Shop the collection"
+    },
+    "featured": "Featured Collection",
+    "shopAll": "Shop All",
+    "story": {
+      "heading": "Made by hand, shaped by time",
+      "p1": "Yundo Ceramics was born from a small studio in Bukchon, Seoul — where centuries of ceramic tradition live alongside contemporary design. Each piece begins as raw Icheon clay, shaped on a wheel by hand.",
+      "p2": "We believe in slow making. Every bowl, cup, and vase passes through dozens of hands and multiple firings before it reaches yours. The subtle irregularities you see aren't flaws — they're signatures of the human touch.",
+      "p3": "Our work draws from the Joseon dynasty's moon jars and buncheong ware, reinterpreted through a modern lens. We make objects meant to be used, held, and loved daily.",
+      "readMore": "Read our story"
+    },
+    "process": {
+      "heading": "From earth to table",
+      "clay": "Clay",
+      "clayDesc": "Sourced from Icheon, aged for six months before use.",
+      "throw": "Throw",
+      "throwDesc": "Hand-thrown on a kick wheel, trimmed the next day.",
+      "fire": "Fire",
+      "fireDesc": "Bisque fired, glazed, then fired again at 1280°C.",
+      "ship": "Ship",
+      "shipDesc": "Carefully packed and shipped worldwide from Seoul."
+    },
+    "press": {
+      "heading": "As seen in"
+    },
+    "newsletter": {
+      "heading": "Stay in the loop",
+      "description": "New collections, studio stories, and seasonal inspirations — delivered to your inbox.",
+      "emailPlaceholder": "Your email address",
+      "subscribe": "Subscribe"
+    }
+  },
+  "shop": {
+    "title": "Shop",
+    "allProducts": "All Products",
+    "categories": {
+      "all": "All",
+      "bowls": "Bowls",
+      "cups": "Cups",
+      "vases": "Vases",
+      "plates": "Plates"
+    },
+    "sort": {
+      "label": "Sort by",
+      "newest": "Newest",
+      "priceAsc": "Price: Low to High",
+      "priceDesc": "Price: High to Low"
+    },
+    "addToCart": "Add to Cart",
+    "outOfStock": "Out of Stock",
+    "noProducts": "No products found in this category."
+  },
+  "product": {
+    "details": "Details",
+    "care": "Care",
+    "shipping": "Shipping",
+    "careText": "Dishwasher safe. Microwave safe. Each piece is unique — slight variations in color and form are natural.",
+    "shippingText": "Free shipping on orders over $150. Ships within 3–5 business days from Seoul. International delivery 7–14 days.",
+    "size": "Size",
+    "material": "Material",
+    "addToCart": "Add to Cart",
+    "adding": "Adding…",
+    "added": "Added to Cart",
+    "buyNow": "Buy Now",
+    "outOfStock": "Out of Stock",
+    "inStock": "In Stock",
+    "quantity": "Quantity",
+    "youMightAlsoLike": "You might also like"
+  },
+  "cart": {
+    "title": "Your Cart",
+    "empty": "Your cart is empty",
+    "continueShopping": "Continue Shopping",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "shippingNote": "Calculated at checkout",
+    "total": "Total",
+    "checkout": "Proceed to Checkout",
+    "remove": "Remove"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "shipping": "Shipping Information",
+    "payment": "Payment",
+    "placeOrder": "Place Order",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "address": "Address",
+    "city": "City",
+    "country": "Country",
+    "postalCode": "Postal Code"
+  },
+  "about": {
+    "title": "About Yundo",
+    "story": "Our Story",
+    "craft": "The Craft",
+    "storyP1": "Yundo Ceramics was founded in 2019 by Minjae Yun in a quiet courtyard studio in Bukchon, Seoul. What started as a personal meditation — shaping clay, waiting for the kiln — grew into a practice of making vessels for everyday life.",
+    "storyP2": "Minjae trained under master ceramicist Park Jongil in Icheon, learning the centuries-old techniques of Korean celadon and buncheong ware. After five years of apprenticeship, she returned to Seoul to develop her own voice — one that honors tradition while embracing the simplicity of modern design.",
+    "storyP3": "Every piece at Yundo is made by hand, from wedging the clay to the final glaze application. We source our clay from Icheon, our glazes from natural minerals, and our inspiration from the rhythms of the Korean seasons.",
+    "studioHeading": "The Studio",
+    "studioP1": "Our studio sits in a renovated hanok in Bukchon, where the sound of the wheel mixes with birdsong from the courtyard. It's a space built for slow, deliberate work.",
+    "studioP2": "We fire in a gas kiln twice a month, each firing taking three days of careful temperature control. The results are never quite the same — and that's the point.",
+    "philosophyHeading": "Philosophy",
+    "philosophyP1": "We believe ceramics should be used, not just admired. Our pieces are designed for the rituals of daily life — the morning coffee, the evening meal, the quiet moment with tea.",
+    "philosophyP2": "In a world of mass production, we choose the slow path. Each piece takes two to three weeks from raw clay to finished object. We make less, so each piece can be more."
+  }
+}
