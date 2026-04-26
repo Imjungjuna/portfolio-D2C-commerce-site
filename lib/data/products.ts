@@ -122,7 +122,7 @@ export const products: Product[] = [
     size: "Ø 14cm × H 22cm",
     material: "Stoneware, crackle glaze",
     stock: 7,
-    image: "https://images.unsplash.com/photo-1581783898382-80f477939ea2?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1681180234028-c343a4ebfb40?q=8000&w=800",
     featured: true,
   },
   {

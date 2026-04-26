@@ -16,7 +16,17 @@ import {
 export default function Header() {
   const t = useTranslations("common");
   const [scrolled, setScrolled] = useState(false);
-  const totalItems = useCartStore((s) => s.totalItems());
+  const [cartCount, setCartCount] = useState(0);
+
+  useEffect(() => {
+    // 마운트 후 현재 값 읽기
+    setCartCount(useCartStore.getState().totalItems());
+    // 이후 변경 구독
+    const unsub = useCartStore.subscribe((state) => {
+      setCartCount(state.items.reduce((sum, item) => sum + item.quantity, 0));
+    });
+    return unsub;
+  }, []);
 
   useEffect(() => {
     function onScroll() {
@@ -80,6 +90,7 @@ export default function Header() {
               <SheetTitle className="sr-only">{t("nav.menu")}</SheetTitle>
               <nav className="flex flex-col gap-8 mt-12 px-2">
                 <SheetClose
+                  nativeButton={false}
                   render={
                     <Link
                       href="/shop"
@@ -90,6 +101,7 @@ export default function Header() {
                   {t("nav.shop")}
                 </SheetClose>
                 <SheetClose
+                  nativeButton={false}
                   render={
                     <Link
                       href="/about"
@@ -126,7 +138,7 @@ export default function Header() {
           <Link
             href="/cart"
             className="relative p-2 -mr-2 text-ink-soft hover:text-ink transition-colors"
-            aria-label={`${t("nav.cart")}${totalItems > 0 ? ` (${totalItems})` : ""}`}
+            aria-label={`${t("nav.cart")}${cartCount > 0 ? ` (${cartCount})` : ""}`}
           >
             <svg
               width="20"
@@ -139,9 +151,9 @@ export default function Header() {
               <path d="M4 5h12l-1.5 9H5.5L4 5z" />
               <path d="M7 5V4a3 3 0 0 1 6 0v1" />
             </svg>
-            {totalItems > 0 && (
+            {cartCount > 0 && (
               <span className="absolute -top-0.5 -right-0.5 flex items-center justify-center w-4 h-4 text-[10px] font-medium bg-accent text-white rounded-full">
-                {totalItems}
+                {cartCount}
               </span>
             )}
           </Link>

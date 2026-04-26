@@ -36,13 +36,13 @@
   "home": {
     "hero": {
       "title": "Slow ceramics from a Seoul studio.",
-      "subtitle": "Handcrafted vessels rooted in Korean tradition, made for modern rituals.",
+      "subtitle": "Rooted in Korean tradition. Made for modern rituals.",
       "cta": "Shop the collection"
     },
     "featured": "Featured Collection",
     "shopAll": "Shop All",
     "story": {
-      "heading": "Made by hand, shaped by time",
+      "heading": "A studio in Bukchon. A practice rooted in Joseon.",
       "p1": "Yundo Ceramics was born from a small studio in Bukchon, Seoul — where centuries of ceramic tradition live alongside contemporary design. Each piece begins as raw Icheon clay, shaped on a wheel by hand.",
       "p2": "We believe in slow making. Every bowl, cup, and vase passes through dozens of hands and multiple firings before it reaches yours. The subtle irregularities you see aren't flaws — they're signatures of the human touch.",
       "p3": "Our work draws from the Joseon dynasty's moon jars and buncheong ware, reinterpreted through a modern lens. We make objects meant to be used, held, and loved daily.",
@@ -63,7 +63,7 @@
       "heading": "As seen in"
     },
     "newsletter": {
-      "heading": "Stay in the loop",
+      "heading": "Letters from Bukchon",
       "description": "New collections, studio stories, and seasonal inspirations — delivered to your inbox.",
       "emailPlaceholder": "Your email address",
       "subscribe": "Subscribe"
