@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
 import {
   getProductBySlug,
   products,
@@ -37,8 +37,12 @@ export default async function ProductPage({
     notFound();
   }
 
+  const locale = await getLocale();
   const t = await getTranslations("product");
+  const tProducts = await getTranslations("products");
   const galleryImages = getGalleryImages(product.image);
+  const productName = tProducts(`${product.slug}.name`);
+  const productDescription = tProducts(`${product.slug}.description`);
   const related = getRelatedProducts(product.slug, product.category);
 
   return (
@@ -47,7 +51,7 @@ export default async function ProductPage({
         <div className="mx-auto max-w-7xl px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
             {/* Left: Image gallery */}
-            <ImageGallery images={galleryImages} alt={product.name} />
+            <ImageGallery images={galleryImages} alt={productName} />
 
             {/* Right: Product info */}
             <div className="flex flex-col gap-6">
@@ -58,20 +62,19 @@ export default async function ProductPage({
 
               {/* Title */}
               <h1 className="font-heading text-4xl md:text-5xl font-light tracking-tight">
-                {product.name}
+                {productName}
               </h1>
 
               {/* Price */}
               <p className="text-xl font-light">
-                ${product.priceUSD}{" "}
-                <span className="text-sm text-ink-soft">
-                  / ₩{product.priceKRW.toLocaleString()}
-                </span>
+                {locale === "ko"
+                  ? `₩${product.priceKRW.toLocaleString()}`
+                  : `$${product.priceUSD}`}
               </p>
 
               {/* Description */}
               <p className="text-base text-ink-soft leading-relaxed">
-                {product.description}
+                {productDescription}
               </p>
 
               {/* Size info */}
@@ -87,7 +90,7 @@ export default async function ProductPage({
 
               {/* Accordion */}
               <div className="mt-4 border-t border-border pt-4">
-                <ProductAccordion product={product} />
+                <ProductAccordion product={product} description={productDescription} />
               </div>
             </div>
           </div>

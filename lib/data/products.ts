@@ -9,6 +9,7 @@ export interface Product {
   material: string;
   stock: number;
   image: string;
+  hoverImage?: string;
   featured: boolean;
 }
 
@@ -24,7 +25,8 @@ export const products: Product[] = [
     size: "Ø 18cm × H 9cm",
     material: "Stoneware, white feldspar glaze",
     stock: 8,
-    image: "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80",
+    hoverImage: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80&crop=entropy&fit=crop",
     featured: true,
   },
   {
@@ -53,6 +55,7 @@ export const products: Product[] = [
     material: "Stoneware, white slip",
     stock: 20,
     image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80",
+    hoverImage: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80&crop=entropy&fit=crop",
     featured: true,
   },
   {
@@ -95,6 +98,7 @@ export const products: Product[] = [
     material: "Porcelain, matte white glaze",
     stock: 5,
     image: "https://images.unsplash.com/photo-1578500494198-246f612d3b3d?w=800&q=80",
+    hoverImage: "https://images.unsplash.com/photo-1578500494198-246f612d3b3d?w=800&q=80&crop=entropy&fit=crop",
     featured: true,
   },
   {
@@ -108,7 +112,7 @@ export const products: Product[] = [
     size: "Ø 8cm × H 15cm",
     material: "Earthenware, partial glaze",
     stock: 10,
-    image: "https://images.unsplash.com/photo-1612196808214-b40bbb7d75b6?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80",
     featured: false,
   },
   {
@@ -122,7 +126,8 @@ export const products: Product[] = [
     size: "Ø 14cm × H 22cm",
     material: "Stoneware, crackle glaze",
     stock: 7,
-    image: "https://images.unsplash.com/photo-1681180234028-c343a4ebfb40?q=8000&w=800",
+    image: "https://images.unsplash.com/photo-1609873814058-a8928924184a?w=800&q=80",
+    hoverImage: "https://images.unsplash.com/photo-1609873814058-a8928924184a?w=800&q=80&crop=entropy&fit=crop",
     featured: true,
   },
   {
@@ -150,7 +155,7 @@ export const products: Product[] = [
     size: "Ø 18cm × H 2cm",
     material: "Porcelain, clear glaze",
     stock: 22,
-    image: "https://images.unsplash.com/photo-1594056113573-8ea18bc8e0b5?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
     featured: false,
   },
   {
@@ -164,7 +169,8 @@ export const products: Product[] = [
     size: "Ø 32cm × H 3cm",
     material: "Stoneware, charcoal glaze",
     stock: 6,
-    image: "https://images.unsplash.com/photo-1607936854279-55e8a4c64888?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1553531384-cc64ac80f931?w=800&q=80",
+    hoverImage: "https://images.unsplash.com/photo-1553531384-cc64ac80f931?w=800&q=80&crop=entropy&fit=crop",
     featured: true,
   },
   {
@@ -178,7 +184,7 @@ export const products: Product[] = [
     size: "Ø 12–22cm × H 5–10cm",
     material: "Stoneware, oatmeal glaze",
     stock: 4,
-    image: "https://images.unsplash.com/photo-1603199506016-b9a694480163?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?w=800&q=80",
     featured: false,
   },
 ];

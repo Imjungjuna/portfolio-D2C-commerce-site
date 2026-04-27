@@ -143,5 +143,102 @@
     "philosophyHeading": "Philosophy",
     "philosophyP1": "We believe ceramics should be used, not just admired. Our pieces are designed for the rituals of daily life — the morning coffee, the evening meal, the quiet moment with tea.",
     "philosophyP2": "In a world of mass production, we choose the slow path. Each piece takes two to three weeks from raw clay to finished object. We make less, so each piece can be more."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: January 1, 2026",
+    "introHeading": "Introduction",
+    "introText": "Yundo Ceramics (\"we,\" \"our,\" or \"us\") respects your privacy and is committed to protecting the personal information you share with us. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website or make a purchase.",
+    "collectHeading": "Information We Collect",
+    "collectText": "We collect information you provide directly to us, including your name, email address, shipping address, payment information, and phone number when you place an order or subscribe to our newsletter. We also automatically collect certain technical information such as your IP address, browser type, and browsing behavior through cookies and similar technologies.",
+    "useHeading": "How We Use Your Information",
+    "useText": "We use your information to process and fulfill orders, communicate with you about your purchases, send marketing communications (with your consent), improve our website and services, and comply with legal obligations. We will never sell your personal information to third parties.",
+    "sharingHeading": "Information Sharing",
+    "sharingText": "We share your information only with trusted service providers who assist us in operating our business — such as payment processors, shipping carriers, and email service providers. These partners are contractually bound to protect your data and use it only for the purposes we specify.",
+    "cookiesHeading": "Cookies",
+    "cookiesText": "Our website uses essential cookies to enable core functionality such as your shopping cart and language preferences. We also use analytics cookies to understand how visitors interact with our site. You can manage your cookie preferences through your browser settings.",
+    "retentionHeading": "Data Retention",
+    "retentionText": "We retain your personal information for as long as necessary to fulfill the purposes outlined in this policy, unless a longer retention period is required by law. Order records are kept for seven years for tax and accounting purposes.",
+    "rightsHeading": "Your Rights",
+    "rightsText": "You have the right to access, correct, or delete your personal information at any time. You may also withdraw consent for marketing communications by clicking the unsubscribe link in any email or by contacting us directly.",
+    "contactHeading": "Contact Us",
+    "contactText": "If you have any questions about this Privacy Policy, please contact us at hello@yundoceramics.com."
+  },
+  "notFound": {
+    "heading": "Page not found",
+    "description": "The page you're looking for doesn't exist or has been moved.",
+    "cta": "Return home"
+  },
+  "products": {
+    "moon-jar-bowl": {
+      "name": "Moon Jar Bowl",
+      "description": "Inspired by the iconic Joseon-era moon jar, this bowl features a soft white glaze with subtle irregularities that catch the light."
+    },
+    "celadon-rice-bowl": {
+      "name": "Celadon Rice Bowl",
+      "description": "A modern take on traditional celadon ware, with a jade-green glaze that deepens in the carved channels."
+    },
+    "buncheong-tea-cup": {
+      "name": "Buncheong Tea Cup",
+      "description": "Rustic buncheong-style cup with white slip brushwork over dark clay. Each stroke is unique."
+    },
+    "ash-glaze-yunomi": {
+      "name": "Ash Glaze Yunomi",
+      "description": "Wood-fired yunomi with natural ash glaze. The kiln's atmosphere creates unpredictable, beautiful patterns."
+    },
+    "iron-oxide-espresso": {
+      "name": "Iron Oxide Espresso Cup",
+      "description": "Compact espresso cup with a rich iron oxide finish. The dark exterior contrasts with a creamy white interior."
+    },
+    "tall-cylinder-vase": {
+      "name": "Tall Cylinder Vase",
+      "description": "Minimalist cylinder vase with a matte white finish. The clean lines let the flowers speak."
+    },
+    "onggi-bud-vase": {
+      "name": "Onggi Bud Vase",
+      "description": "Small bud vase inspired by traditional onggi fermentation pots. The unglazed exterior has a warm, earthy texture."
+    },
+    "crackle-glaze-vase": {
+      "name": "Crackle Glaze Vase",
+      "description": "Medium vase with intentional crackle glaze that references centuries-old Korean ceramic tradition."
+    },
+    "hakeme-dinner-plate": {
+      "name": "Hakeme Dinner Plate",
+      "description": "Generous dinner plate with hakeme (brush-marked) white slip over iron-rich clay. Food looks stunning on it."
+    },
+    "moon-white-side-plate": {
+      "name": "Moon White Side Plate",
+      "description": "Elegant side plate in pure white with a slightly irregular rim that speaks to its handmade origin."
+    },
+    "charcoal-serving-plate": {
+      "name": "Charcoal Serving Plate",
+      "description": "Large serving plate in deep charcoal with a satin finish. Perfect for sharing dishes at the center of the table."
+    },
+    "nesting-bowl-set": {
+      "name": "Nesting Bowl Set",
+      "description": "Set of three nesting bowls in graduated sizes. Warm oatmeal glaze with speckled texture."
+    }
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: January 1, 2026",
+    "introHeading": "Agreement to Terms",
+    "introText": "By accessing or using the Yundo Ceramics website and purchasing our products, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our website.",
+    "productsHeading": "Products & Orders",
+    "productsText": "All products are handmade and may vary slightly in color, size, and texture. These variations are inherent to handcrafted ceramics and are not considered defects. We reserve the right to limit quantities, refuse orders, or cancel orders at our discretion. Prices are listed in US Dollars and are subject to change without notice.",
+    "paymentHeading": "Payment",
+    "paymentText": "We accept major credit cards and other payment methods as displayed at checkout. Payment is processed at the time of order. All transactions are secured with industry-standard encryption.",
+    "shippingHeading": "Shipping & Delivery",
+    "shippingText": "Orders are processed within 3–5 business days from our studio in Seoul. Domestic shipping within South Korea takes 1–3 business days. International shipping takes 7–14 business days depending on destination. Shipping costs are calculated at checkout. Orders over $150 USD qualify for free standard shipping.",
+    "returnsHeading": "Returns & Exchanges",
+    "returnsText": "We accept returns within 14 days of delivery for unused items in their original packaging. Due to the handmade nature of our products, items damaged during shipping will be replaced at no cost. Custom or made-to-order items are non-refundable. To initiate a return, please contact us at hello@yundoceramics.com.",
+    "ipHeading": "Intellectual Property",
+    "ipText": "All content on this website — including text, images, designs, logos, and product photography — is the property of Yundo Ceramics and is protected by copyright and trademark laws. You may not reproduce, distribute, or use our content without prior written permission.",
+    "liabilityHeading": "Limitation of Liability",
+    "liabilityText": "Yundo Ceramics shall not be liable for any indirect, incidental, or consequential damages arising from the use of our website or products. Our total liability shall not exceed the amount you paid for the product in question.",
+    "changesHeading": "Changes to Terms",
+    "changesText": "We may update these Terms of Service from time to time. Changes will be posted on this page with an updated revision date. Your continued use of the website after changes constitutes acceptance of the revised terms.",
+    "contactHeading": "Contact Us",
+    "contactText": "For questions about these Terms of Service, please reach out to hello@yundoceramics.com."
   }
 }

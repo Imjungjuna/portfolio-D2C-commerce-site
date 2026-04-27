@@ -9,7 +9,13 @@ import {
 } from "@/components/ui/accordion";
 import type { Product } from "@/lib/data/products";
 
-export default function ProductAccordion({ product }: { product: Product }) {
+export default function ProductAccordion({
+  product,
+  description,
+}: {
+  product: Product;
+  description: string;
+}) {
   const t = useTranslations("product");
 
   return (
@@ -20,7 +26,7 @@ export default function ProductAccordion({ product }: { product: Product }) {
         </AccordionTrigger>
         <AccordionContent>
           <div className="space-y-2 text-sm text-ink-soft leading-relaxed">
-            <p>{product.description}</p>
+            <p>{description}</p>
             <p>
               <span className="text-ink">{t("size")}:</span> {product.size}
             </p>

@@ -27,7 +27,7 @@ export default async function AboutPage() {
       </section>
 
       {/* Our Story — text left, image right */}
-      <section className="py-24 md:py-32">
+      <section id="story" className="py-24 md:py-32 scroll-mt-16">
         <div className="mx-auto max-w-7xl px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
             <div>
@@ -65,12 +65,12 @@ export default async function AboutPage() {
       </section>
 
       {/* The Studio — image left, text right */}
-      <section className="py-24 md:py-32 bg-bg-alt">
+      <section id="craft" className="py-24 md:py-32 bg-bg-alt scroll-mt-16">
         <div className="mx-auto max-w-7xl px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
             <div className="relative aspect-[4/5] overflow-hidden md:order-1">
               <Image
-                src="https://images.unsplash.com/photo-1612196808214-b40bbb7d75b6?w=960&q=80"
+                src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=960&q=80"
                 alt="Sunlit ceramics studio with shelves of finished pieces"
                 fill
                 className="object-cover"
@@ -91,7 +91,7 @@ export default async function AboutPage() {
       </section>
 
       {/* Philosophy — centered wide text */}
-      <section className="py-24 md:py-32">
+      <section id="studio" className="py-24 md:py-32 scroll-mt-16">
         <div className="mx-auto max-w-3xl px-6">
           <h2 className="font-heading text-3xl md:text-5xl font-light mb-8 text-center">
             {t("philosophyHeading")}

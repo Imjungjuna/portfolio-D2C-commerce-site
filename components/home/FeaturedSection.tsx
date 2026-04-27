@@ -26,7 +26,7 @@ export default function FeaturedSection({
             {t("shopAll")}
           </Link>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8  sm:px-0">
           {products.map((product) => (
             <ProductCard key={product.slug} product={product} />
           ))}
