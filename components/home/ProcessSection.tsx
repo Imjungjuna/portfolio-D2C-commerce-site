@@ -51,22 +51,22 @@ export default function ProcessSection() {
   return (
     <section className="py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
-        <h2 className="font-heading text-3xl md:text-5xl font-light text-center mb-16 md:mb-20">
+        <h2 className="font-heading text-2xl md:text-5xl font-light text-center mb-16 md:mb-20">
           {t("heading")}
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-0 md:gap-8">
           {steps.map((step, i) => (
-            <div key={step.key} className="text-center">
+            <div key={step.key} className={`text-center py-10 md:py-0 ${i !== 0 ? "border-t border-border md:border-t-0" : ""}`}>
               <div className="flex justify-center mb-6 text-accent">
                 {step.icon}
               </div>
               <div className="text-xs uppercase tracking-[0.2em] text-ink-soft mb-1">
                 {String(i + 1).padStart(2, "0")}
               </div>
-              <h3 className="font-heading text-xl font-light mb-3">
+              <h3 className="font-heading text-base md:text-xl font-light mb-3">
                 {t(step.key)}
               </h3>
-              <p className="text-sm text-ink-soft leading-relaxed">
+              <p className="text-sm md:text-base text-ink-soft leading-relaxed">
                 {t(`${step.key}Desc`)}
               </p>
             </div>

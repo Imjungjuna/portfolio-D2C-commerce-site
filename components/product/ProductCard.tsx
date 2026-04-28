@@ -59,7 +59,7 @@ export default function ProductCard({
               hovered ? "opacity-100" : "opacity-0"
             }`}
           >
-            <span className="px-5 py-2.5 text-white text-xs uppercase tracking-[0.2em] transition-colors duration-200 hover:bg-black">
+            <span className="px-5 py-2.5 bg-ink text-bg text-xs uppercase tracking-[0.2em] transition-colors duration-200 hover:bg-ink-soft">
               {overlayText}
             </span>
           </div>

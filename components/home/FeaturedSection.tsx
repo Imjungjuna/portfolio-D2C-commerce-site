@@ -79,7 +79,7 @@ export default function FeaturedSection({
     <section className="py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex items-end justify-between mb-20">
-          <h2 className="font-heading text-3xl md:text-5xl font-light">
+          <h2 className="font-heading text-2xl md:text-5xl font-light">
             {t("featured")}
           </h2>
           <Link

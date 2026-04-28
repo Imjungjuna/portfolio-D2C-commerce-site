@@ -44,6 +44,7 @@ export const products: Product[] = [
     stock: 15,
     image: "/products/Celadon Rice Bowl.jpg",
     images: ["/products/Celadon Rice Bowl.jpg", "/products/Celadon-Rice-Bowl-2.jpg"],
+    hoverImage: "/products/Celadon-Rice-Bowl-2.jpg",
     featured: false,
   },
   {
@@ -75,6 +76,7 @@ export const products: Product[] = [
     stock: 12,
     image: "/products/Ash Glaze Yunomi-1.png",
     images: ["/products/Ash Glaze Yunomi-1.png", "/products/Ash Glaze Yunomi-2.png", "/products/Ash Glaze Yunomi-3.png"],
+    hoverImage: "/products/Ash Glaze Yunomi-2.png",
     featured: false,
   },
   {
@@ -90,6 +92,7 @@ export const products: Product[] = [
     stock: 25,
     image: "/products/Iron Oxide Espresso Cup-1.png",
     images: ["/products/Iron Oxide Espresso Cup-1.png", "/products/Iron Oxide Espresso Cup-2.png", "/products/Iron Oxide Espresso Cup-3.png"],
+    hoverImage: "/products/Iron Oxide Espresso Cup-2.png",
     featured: false,
   },
   {
@@ -121,6 +124,7 @@ export const products: Product[] = [
     stock: 10,
     image: "/products/Onggi Bud Vase-1.png",
     images: ["/products/Onggi Bud Vase-1.png", "/products/Onggi Bud Vase-2.png", "/products/Onggi Bud Vase-3.png"],
+    hoverImage: "/products/Onggi Bud Vase-2.png",
     featured: false,
   },
   {
@@ -150,8 +154,9 @@ export const products: Product[] = [
     size: "Ø 27cm × H 3cm",
     material: "Stoneware, hakeme slip",
     stock: 18,
-    image: "/products/Hakeme Dinner Plate-1.png",
-    images: ["/products/Hakeme Dinner Plate-1.png", "/products/Hakeme Dinner Plate-2.png", "/products/Hakeme Dinner Plate-3.png"],
+    image: "/products/Hakeme Dinner Plate-2.png",
+    images: ["/products/Hakeme Dinner Plate-2.png", "/products/Hakeme Dinner Plate-1.png", "/products/Hakeme Dinner Plate-3.png"],
+    hoverImage: "/products/Hakeme Dinner Plate-1.png",
     featured: false,
   },
   {
@@ -165,8 +170,9 @@ export const products: Product[] = [
     size: "Ø 18cm × H 2cm",
     material: "Porcelain, clear glaze",
     stock: 22,
-    image: "/products/Moon White Side Plate-1.png",
-    images: ["/products/Moon White Side Plate-1.png", "/products/Moon White Side Plate-2.png", "/products/Moon White Side Plate-3.png"],
+    image: "/products/Moon White Side Plate-2.png",
+    images: ["/products/Moon White Side Plate-2.png", "/products/Moon White Side Plate-1.png", "/products/Moon White Side Plate-3.png"],
+    hoverImage: "/products/Moon White Side Plate-1.png",
     featured: false,
   },
   {
@@ -198,6 +204,7 @@ export const products: Product[] = [
     stock: 4,
     image: "/products/Nesting Bowl Set-1.png",
     images: ["/products/Nesting Bowl Set-1.png", "/products/Nesting Bowl Set-2.png", "/products/Nesting Bowl Set-3.png"],
+    hoverImage: "/products/Nesting Bowl Set-2.png",
     featured: false,
   },
 ];

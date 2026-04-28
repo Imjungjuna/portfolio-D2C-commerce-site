@@ -21,7 +21,7 @@ export default function PressSection() {
           {publications.map((name) => (
             <span
               key={name}
-              className="font-heading text-xl md:text-2xl font-light text-ink-soft/40 tracking-wide select-none"
+              className="font-heading text-base md:text-2xl font-light text-ink-soft/40 tracking-wide select-none"
             >
               {name}
             </span>

@@ -10,7 +10,7 @@ export default function StorySection() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
           {/* Image */}
-          <div className="relative aspect-[4/5] overflow-hidden">
+          <div className="relative aspect-4/5 overflow-hidden">
             <Image
               src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=960&q=80"
               alt="Potter shaping clay on a wheel in the studio"
@@ -22,7 +22,7 @@ export default function StorySection() {
 
           {/* Text */}
           <div>
-            <h2 className="font-heading text-3xl md:text-5xl font-light mb-8">
+            <h2 className="font-heading text-2xl md:text-5xl font-light mb-8">
               {t("heading")}
             </h2>
             <div className="space-y-6 text-base leading-relaxed text-ink-soft">
