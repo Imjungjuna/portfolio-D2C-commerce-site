@@ -10,6 +10,10 @@ import ProductAccordion from "@/components/product/ProductAccordion";
 import RelatedProducts from "@/components/product/RelatedProducts";
 
 function getGalleryImages(baseUrl: string): string[] {
+  // Local paths can't be URL-parsed for query variant generation
+  if (baseUrl.startsWith("/")) {
+    return [baseUrl];
+  }
   const url = new URL(baseUrl);
   return [
     baseUrl,
@@ -40,7 +44,7 @@ export default async function ProductPage({
   const locale = await getLocale();
   const t = await getTranslations("product");
   const tProducts = await getTranslations("products");
-  const galleryImages = getGalleryImages(product.image);
+  const galleryImages = product.images ?? [];
   const productName = tProducts(`${product.slug}.name`);
   const productDescription = tProducts(`${product.slug}.description`);
   const related = getRelatedProducts(product.slug, product.category);

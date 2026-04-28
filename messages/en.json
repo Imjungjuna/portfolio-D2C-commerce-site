@@ -41,6 +41,7 @@
     },
     "featured": "Featured Collection",
     "shopAll": "Shop All",
+    "learnMore": "Learn More",
     "story": {
       "heading": "A studio in Bukchon. A practice rooted in Joseon.",
       "p1": "Yundo Ceramics was born from a small studio in Bukchon, Seoul — where centuries of ceramic tradition live alongside contemporary design. Each piece begins as raw Icheon clay, shaped on a wheel by hand.",
@@ -138,11 +139,12 @@
     "storyP2": "Minjae trained under master ceramicist Park Jongil in Icheon, learning the centuries-old techniques of Korean celadon and buncheong ware. After five years of apprenticeship, she returned to Seoul to develop her own voice — one that honors tradition while embracing the simplicity of modern design.",
     "storyP3": "Every piece at Yundo is made by hand, from wedging the clay to the final glaze application. We source our clay from Icheon, our glazes from natural minerals, and our inspiration from the rhythms of the Korean seasons.",
     "studioHeading": "The Studio",
-    "studioP1": "Our studio sits in a renovated hanok in Bukchon, where the sound of the wheel mixes with birdsong from the courtyard. It's a space built for slow, deliberate work.",
-    "studioP2": "We fire in a gas kiln twice a month, each firing taking three days of careful temperature control. The results are never quite the same — and that's the point.",
+    "studioP1": "The studio sits down a narrow alley in Bukchon, beneath old clay roof tiles that have weathered decades of Seoul winters. In the low morning light, we open the doors to the smell of wet clay and the quiet turning of the wheel. Outside, sparrows move through the courtyard. Inside, time moves differently. The space is modest — workbenches, drying shelves, rows of glaze jars — but everything here is arranged for making things carefully and without hurry.",
+    "studioP2": "We fire our gas kiln twice a month. From ignition to opening, each cycle takes nearly a week: three days of gradual temperature climb toward 1,280°C, and three more days to cool before we can unlatch the door. That moment is always a mix of tension and quiet anticipation. The same clay, the same glaze — and yet the flame writes something different each time, in the depth of a celadon pool, the faint texture left by the kiln's own atmosphere. That unpredictability is not a flaw to be corrected. It is the signature of the hand.",
     "philosophyHeading": "Philosophy",
-    "philosophyP1": "We believe ceramics should be used, not just admired. Our pieces are designed for the rituals of daily life — the morning coffee, the evening meal, the quiet moment with tea.",
-    "philosophyP2": "In a world of mass production, we choose the slow path. Each piece takes two to three weeks from raw clay to finished object. We make less, so each piece can be more."
+    "philosophyP1": "We believe a bowl only becomes itself when it's held. The pieces at Yundo are designed not for shelves, but for the unremarkable, irreplaceable rituals of daily life — the first coffee of the morning, the long dinner shared with old friends, the quiet afternoon cup of tea. These are the moments that accumulate into a life. We want our work to be part of them: ceramics that grow more beautiful with use, that carry the memory of meals, that become yours through time.",
+    "closingQuote": "Made slowly. To last.",
+    "philosophyP2":"We don't manufacture scarcity. But there is a natural limit to what two hands can make with care. Each piece takes two to three weeks from raw clay to finished object — and we have no intention of shortening that. Keeping this pace is not inefficiency; it is our commitment to quality, and our quiet resistance against the logic of mass production. We make less, so each piece can be made better. And in a world that moves very fast, we think there is something worth protecting in the things made slowly."
   },
   "privacy": {
     "title": "Privacy Policy",
@@ -163,6 +165,10 @@
     "rightsText": "You have the right to access, correct, or delete your personal information at any time. You may also withdraw consent for marketing communications by clicking the unsubscribe link in any email or by contacting us directly.",
     "contactHeading": "Contact Us",
     "contactText": "If you have any questions about this Privacy Policy, please contact us at hello@yundoceramics.com."
+  },
+  "error": {
+    "heading": "Something went wrong",
+    "retry": "Try again"
   },
   "notFound": {
     "heading": "Page not found",

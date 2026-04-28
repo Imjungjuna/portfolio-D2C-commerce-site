@@ -1,11 +1,14 @@
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
+import ClosingImage from "@/components/about/ClosingImage";
+import ScrollToHash from "@/components/about/ScrollToHash";
 
 export default async function AboutPage() {
   const t = await getTranslations("about");
 
   return (
     <article>
+      <ScrollToHash />
       {/* Hero */}
       <section className="relative h-[60vh] min-h-[400px]">
         <Image
@@ -40,9 +43,9 @@ export default async function AboutPage() {
                 <p>{t("storyP3")}</p>
               </div>
             </div>
-            <div className="relative aspect-[3/4] overflow-hidden">
+            <div className="relative aspect-3/4 overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=960&q=80"
+                src="/about-page/our-story.png"
                 alt="Ceramicist shaping clay on a potter's wheel"
                 fill
                 className="object-cover"
@@ -54,7 +57,7 @@ export default async function AboutPage() {
       </section>
 
       {/* Full-width image break */}
-      <section className="relative h-[50vh] min-h-[360px]">
+      {/* <section className="relative h-[50vh] min-h-[360px]">
         <Image
           src="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=1920&q=80"
           alt="Close-up of hands working with wet clay"
@@ -62,15 +65,15 @@ export default async function AboutPage() {
           className="object-cover"
           sizes="100vw"
         />
-      </section>
+      </section> */}
 
       {/* The Studio — image left, text right */}
       <section id="craft" className="py-24 md:py-32 bg-bg-alt scroll-mt-16">
         <div className="mx-auto max-w-7xl px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
-            <div className="relative aspect-[4/5] overflow-hidden md:order-1">
+            <div className="relative aspect-4/5 overflow-hidden md:order-1">
               <Image
-                src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=960&q=80"
+                src="/about-page/working-studio.png"
                 alt="Sunlit ceramics studio with shelves of finished pieces"
                 fill
                 className="object-cover"
@@ -90,29 +93,33 @@ export default async function AboutPage() {
         </div>
       </section>
 
-      {/* Philosophy — centered wide text */}
+      {/* Philosophy — text left, image right */}
       <section id="studio" className="py-24 md:py-32 scroll-mt-16">
-        <div className="mx-auto max-w-3xl px-6">
-          <h2 className="font-heading text-3xl md:text-5xl font-light mb-8 text-center">
-            {t("philosophyHeading")}
-          </h2>
-          <div className="space-y-6 text-base md:text-lg leading-relaxed text-ink-soft text-center">
-            <p>{t("philosophyP1")}</p>
-            <p>{t("philosophyP2")}</p>
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
+            <div>
+              <h2 className="font-heading text-3xl md:text-5xl font-light mb-8">
+                {t("philosophyHeading")}
+              </h2>
+              <div className="space-y-6 text-base leading-relaxed text-ink-soft">
+                <p>{t("philosophyP1")}</p>
+                <p>{t("philosophyP2")}</p>
+              </div>
+            </div>
+            <div className="relative aspect-4/5 overflow-hidden">
+              <Image
+                src="/about-page/philosophy.png"
+                alt="Philosophy"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Closing image */}
-      <section className="relative h-[40vh] min-h-[300px]">
-        <Image
-          src="https://images.unsplash.com/photo-1581783898382-80f477939ea2?w=1920&q=80"
-          alt="Finished ceramic pieces cooling after kiln firing"
-          fill
-          className="object-cover"
-          sizes="100vw"
-        />
-      </section>
+      <ClosingImage quote={t("closingQuote")} />
     </article>
   );
 }

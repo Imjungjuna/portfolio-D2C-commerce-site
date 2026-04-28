@@ -9,6 +9,7 @@ export interface Product {
   material: string;
   stock: number;
   image: string;
+  images?: string[];
   hoverImage?: string;
   featured: boolean;
 }
@@ -25,8 +26,9 @@ export const products: Product[] = [
     size: "Ø 18cm × H 9cm",
     material: "Stoneware, white feldspar glaze",
     stock: 8,
-    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80",
-    hoverImage: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80&crop=entropy&fit=crop",
+    image: "/products/moon-bowl.jpg",
+    images: ["/products/moon-bowl.jpg", "/products/moon-bowl-2.jpg"],
+    hoverImage: "/products/moon-bowl-2.jpg",
     featured: true,
   },
   {
@@ -40,7 +42,8 @@ export const products: Product[] = [
     size: "Ø 13cm × H 7cm",
     material: "Porcelain, celadon glaze",
     stock: 15,
-    image: "https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=800&q=80",
+    image: "/products/Celadon Rice Bowl.jpg",
+    images: ["/products/Celadon Rice Bowl.jpg", "/products/Celadon-Rice-Bowl-2.jpg"],
     featured: false,
   },
   {
@@ -54,8 +57,9 @@ export const products: Product[] = [
     size: "Ø 8cm × H 7cm",
     material: "Stoneware, white slip",
     stock: 20,
-    image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80",
-    hoverImage: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80&crop=entropy&fit=crop",
+    image: "/products/Buncheong Tea Cup-1.png",
+    images: ["/products/Buncheong Tea Cup-1.png", "/products/Buncheong Tea Cup-2.png", "/products/Buncheong Tea Cup-3.png"],
+    hoverImage: "/products/Buncheong Tea Cup-2.png",
     featured: true,
   },
   {
@@ -69,7 +73,8 @@ export const products: Product[] = [
     size: "Ø 8cm × H 9cm",
     material: "Stoneware, natural ash glaze",
     stock: 12,
-    image: "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=800&q=80",
+    image: "/products/Ash Glaze Yunomi-1.png",
+    images: ["/products/Ash Glaze Yunomi-1.png", "/products/Ash Glaze Yunomi-2.png", "/products/Ash Glaze Yunomi-3.png"],
     featured: false,
   },
   {
@@ -83,7 +88,8 @@ export const products: Product[] = [
     size: "Ø 6cm × H 6cm",
     material: "Stoneware, iron oxide glaze",
     stock: 25,
-    image: "https://images.unsplash.com/photo-1572726729207-a78d6feb18d7?w=800&q=80",
+    image: "/products/Iron Oxide Espresso Cup-1.png",
+    images: ["/products/Iron Oxide Espresso Cup-1.png", "/products/Iron Oxide Espresso Cup-2.png", "/products/Iron Oxide Espresso Cup-3.png"],
     featured: false,
   },
   {
@@ -97,8 +103,9 @@ export const products: Product[] = [
     size: "Ø 12cm × H 30cm",
     material: "Porcelain, matte white glaze",
     stock: 5,
-    image: "https://images.unsplash.com/photo-1578500494198-246f612d3b3d?w=800&q=80",
-    hoverImage: "https://images.unsplash.com/photo-1578500494198-246f612d3b3d?w=800&q=80&crop=entropy&fit=crop",
+    image: "/products/Minimalist cylinder vase-1.png",
+    images: ["/products/Minimalist cylinder vase-1.png", "/products/Minimalist cylinder vase-2.png", "/products/Minimalist cylinder vase-3.png"],
+    hoverImage: "/products/Minimalist cylinder vase-2.png",
     featured: true,
   },
   {
@@ -112,7 +119,8 @@ export const products: Product[] = [
     size: "Ø 8cm × H 15cm",
     material: "Earthenware, partial glaze",
     stock: 10,
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80",
+    image: "/products/Onggi Bud Vase-1.png",
+    images: ["/products/Onggi Bud Vase-1.png", "/products/Onggi Bud Vase-2.png", "/products/Onggi Bud Vase-3.png"],
     featured: false,
   },
   {
@@ -126,8 +134,9 @@ export const products: Product[] = [
     size: "Ø 14cm × H 22cm",
     material: "Stoneware, crackle glaze",
     stock: 7,
-    image: "https://images.unsplash.com/photo-1609873814058-a8928924184a?w=800&q=80",
-    hoverImage: "https://images.unsplash.com/photo-1609873814058-a8928924184a?w=800&q=80&crop=entropy&fit=crop",
+    image: "/products/Crackle Glaze Vase-1.png",
+    images: ["/products/Crackle Glaze Vase-1.png", "/products/Crackle Glaze Vase-2.png", "/products/Crackle Glaze Vase -3.png"],
+    hoverImage: "/products/Crackle Glaze Vase-2.png",
     featured: true,
   },
   {
@@ -141,7 +150,8 @@ export const products: Product[] = [
     size: "Ø 27cm × H 3cm",
     material: "Stoneware, hakeme slip",
     stock: 18,
-    image: "https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=800&q=80",
+    image: "/products/Hakeme Dinner Plate-1.png",
+    images: ["/products/Hakeme Dinner Plate-1.png", "/products/Hakeme Dinner Plate-2.png", "/products/Hakeme Dinner Plate-3.png"],
     featured: false,
   },
   {
@@ -155,7 +165,8 @@ export const products: Product[] = [
     size: "Ø 18cm × H 2cm",
     material: "Porcelain, clear glaze",
     stock: 22,
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+    image: "/products/Moon White Side Plate-1.png",
+    images: ["/products/Moon White Side Plate-1.png", "/products/Moon White Side Plate-2.png", "/products/Moon White Side Plate-3.png"],
     featured: false,
   },
   {
@@ -169,8 +180,9 @@ export const products: Product[] = [
     size: "Ø 32cm × H 3cm",
     material: "Stoneware, charcoal glaze",
     stock: 6,
-    image: "https://images.unsplash.com/photo-1553531384-cc64ac80f931?w=800&q=80",
-    hoverImage: "https://images.unsplash.com/photo-1553531384-cc64ac80f931?w=800&q=80&crop=entropy&fit=crop",
+    image: "/products/Charcoal Serving Plate-1.png",
+    images: ["/products/Charcoal Serving Plate-1.png", "/products/Charcoal Serving Plate-2.png", "/products/Charcoal Serving Plate-3.png"],
+    hoverImage: "/products/Charcoal Serving Plate-2.png",
     featured: true,
   },
   {
@@ -184,7 +196,8 @@ export const products: Product[] = [
     size: "Ø 12–22cm × H 5–10cm",
     material: "Stoneware, oatmeal glaze",
     stock: 4,
-    image: "https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?w=800&q=80",
+    image: "/products/Nesting Bowl Set-1.png",
+    images: ["/products/Nesting Bowl Set-1.png", "/products/Nesting Bowl Set-2.png", "/products/Nesting Bowl Set-3.png"],
     featured: false,
   },
 ];

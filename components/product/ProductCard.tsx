@@ -6,7 +6,13 @@ import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import type { Product } from "@/lib/data/products";
 
-export default function ProductCard({ product }: { product: Product }) {
+export default function ProductCard({
+  product,
+  overlayText,
+}: {
+  product: Product;
+  overlayText?: string;
+}) {
   const [hovered, setHovered] = useState(false);
   const tProducts = useTranslations("products");
   const locale = useLocale();
@@ -23,12 +29,18 @@ export default function ProductCard({ product }: { product: Product }) {
           src={product.image}
           alt={product.name}
           fill
-          className={`object-cover transition-all duration-700 ${
-            hovered && product.hoverImage ? "opacity-0 scale-105" : "opacity-100 scale-100"
+          className={`object-cover ${
+            !overlayText
+              ? `transition-all duration-700 ${
+                  hovered && product.hoverImage
+                    ? "opacity-0 scale-105"
+                    : "opacity-100 scale-100"
+                }`
+              : ""
           }`}
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
-        {product.hoverImage && (
+        {!overlayText && product.hoverImage && (
           <Image
             src={product.hoverImage}
             alt={`${product.name} alternate view`}
@@ -39,6 +51,20 @@ export default function ProductCard({ product }: { product: Product }) {
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
         )}
+
+        {/* Overlay text (carousel mode) */}
+        {overlayText && (
+          <div
+            className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${
+              hovered ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <span className="px-5 py-2.5 text-white text-xs uppercase tracking-[0.2em] transition-colors duration-200 hover:bg-black">
+              {overlayText}
+            </span>
+          </div>
+        )}
+
         {product.stock === 0 && (
           <div className="absolute inset-0 bg-bg/60 flex items-center justify-center">
             <span className="text-xs uppercase tracking-[0.2em] text-ink-soft">
@@ -51,7 +77,9 @@ export default function ProductCard({ product }: { product: Product }) {
         <p className="text-xs uppercase tracking-[0.2em] text-ink-soft">
           {product.category}
         </p>
-        <h3 className="mt-1 font-heading text-lg font-light">{tProducts(`${product.slug}.name`)}</h3>
+        <h3 className="mt-1 font-heading text-lg font-light">
+          {tProducts(`${product.slug}.name`)}
+        </h3>
         <p className="mt-1 text-sm text-ink-soft">
           {locale === "ko"
             ? `₩${product.priceKRW.toLocaleString()}`

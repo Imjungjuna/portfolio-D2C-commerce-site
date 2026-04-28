@@ -12,6 +12,16 @@ export default function ImageGallery({
 }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
+  if (images.length === 0) {
+    return (
+      <div className="relative aspect-[3/4] overflow-hidden bg-bg-alt flex items-center justify-center">
+        <span className="text-xs uppercase tracking-[0.2em] text-ink-soft">
+          No image
+        </span>
+      </div>
+    );
+  }
+
   return (
     <div className="flex flex-col gap-4">
       {/* Main image */}

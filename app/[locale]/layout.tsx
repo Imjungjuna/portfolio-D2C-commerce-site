@@ -37,7 +37,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${cormorant.variable} ${inter.variable} h-full antialiased`}
+      className={`${cormorant.variable} ${inter.variable} h-full antialiased scroll-smooth`}
     >
       <body className="min-h-full flex flex-col font-body bg-bg text-ink">
         <NextIntlClientProvider messages={messages}>

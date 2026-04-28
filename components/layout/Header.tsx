@@ -1,8 +1,8 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
-import { useEffect, useState } from "react";
+import { Link, usePathname } from "@/i18n/navigation";
+import { useEffect, useState, useCallback } from "react";
 import { useCartStore } from "@/lib/stores/cart";
 import LocaleSwitcher from "./LocaleSwitcher";
 import {
@@ -15,8 +15,28 @@ import {
 
 export default function Header() {
   const t = useTranslations("common");
-  const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const [scrollY, setScrollY] = useState(0);
   const [cartCount, setCartCount] = useState(0);
+
+  const handleLogoClick = useCallback(
+    (e: React.MouseEvent) => {
+      if (pathname !== "/") return;
+      e.preventDefault();
+      const start = window.scrollY;
+      if (start === 0) return;
+      const duration = 350;
+      const startTime = performance.now();
+      function step(now: number) {
+        const progress = Math.min((now - startTime) / duration, 1);
+        const ease = 1 - Math.pow(1 - progress, 3);
+        window.scrollTo(0, start * (1 - ease));
+        if (progress < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    },
+    [pathname]
+  );
 
   useEffect(() => {
     // 마운트 후 현재 값 읽기
@@ -30,7 +50,7 @@ export default function Header() {
 
   useEffect(() => {
     function onScroll() {
-      setScrolled(window.scrollY > 20);
+      setScrollY(window.scrollY);
     }
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -53,15 +73,21 @@ export default function Header() {
     </>
   );
 
+  const bgOpacity = Math.min(scrollY / 80, 1);
+
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-bg/95 backdrop-blur-sm shadow-[0_1px_0_var(--border)]"
-          : "bg-transparent"
-      }`}
-    >
-      <div className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 z-50">
+      {/* Smooth background layer — fades in over first 80px of scroll */}
+      <div
+        className="absolute inset-0 bg-bg/95 backdrop-blur-sm"
+        style={{ opacity: bgOpacity }}
+      />
+      {/* Border bottom */}
+      <div
+        className="absolute bottom-0 inset-x-0 h-px bg-border"
+        style={{ opacity: bgOpacity }}
+      />
+      <div className="relative z-10 mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
         {/* Mobile menu */}
         <div className="md:hidden">
           <Sheet>
@@ -125,6 +151,7 @@ export default function Header() {
         {/* Logo — center */}
         <Link
           href="/"
+          onClick={handleLogoClick}
           className="font-heading text-xl md:text-2xl font-light tracking-tight absolute left-1/2 -translate-x-1/2"
         >
           {t("brandName")}
