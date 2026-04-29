@@ -1,9 +1,10 @@
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 
 export default function HeroSection() {
   const t = useTranslations("home.hero");
+  const locale = useLocale();
 
   return (
     <section className="relative h-[calc(100vh-4rem)] min-h-150 flex items-end">
@@ -17,7 +18,9 @@ export default function HeroSection() {
       />
       <div className="absolute inset-0 bg-linear-to-t from-black/50 via-black/10 to-transparent" />
       <div className="relative z-10 mx-auto max-w-7xl w-full px-6 pb-16 md:pb-24">
-        <h1 className="font-heading text-5xl md:text-7xl break-keep font-light tracking-tight leading-tight text-white max-w-2xl">
+        <h1 className={`font-heading break-keep font-light tracking-tight leading-tight text-4xl text-white max-w-2xl ${
+            locale === 'ko' ? 'md:text-6xl whitespace-pre-line' : 'md:text-7xl'
+          }`}>
           {t("title")}
         </h1>
         <p className="mt-4 text-base md:text-lg text-white/80 max-w-lg leading-relaxed">

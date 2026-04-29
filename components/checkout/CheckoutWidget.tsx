@@ -18,6 +18,7 @@ function generateOrderId() {
 export default function CheckoutWidget() {
   const t = useTranslations("checkout");
   const locale = useLocale();
+  const p = useTranslations("products");
 
   const [items, setItems] = useState<CartItem[]>([]);
   const [mounted, setMounted] = useState(false);
@@ -39,11 +40,11 @@ export default function CheckoutWidget() {
   // Calculate totals
   const totalKRW = items.reduce(
     (sum, item) => sum + item.product.priceKRW * item.quantity,
-    0
+    0,
   );
   const totalUSD = items.reduce(
     (sum, item) => sum + item.product.priceUSD * item.quantity,
-    0
+    0,
   );
 
   // Initialize Toss Payments widget
@@ -143,7 +144,7 @@ export default function CheckoutWidget() {
       {/* Right: Order summary */}
       <div>
         <div className="border border-border p-6 space-y-6">
-          <h2 className="text-xs uppercase tracking-[0.2em]">
+          <h2 className="text-xs uppercase tracking-widest">
             {t("orderSummary")}
           </h2>
 
@@ -164,7 +165,10 @@ export default function CheckoutWidget() {
                   )}
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm truncate">{item.product.name}</p>
+                  <p className="text-sm truncate">
+                    {" "}
+                    {p(`${item.product.slug}.name`)}
+                  </p>
                   <p className="text-xs text-ink-soft mt-1">
                     {t("qty")}: {item.quantity}
                   </p>

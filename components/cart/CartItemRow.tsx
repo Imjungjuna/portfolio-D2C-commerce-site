@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { useCartStore, type CartItem } from "@/lib/stores/cart";
@@ -8,8 +8,18 @@ import QuantityStepper from "@/components/product/QuantityStepper";
 
 export default function CartItemRow({ item }: { item: CartItem }) {
   const t = useTranslations("cart");
+  const p = useTranslations("products");
+  const c = useTranslations("shop.categories");
+  const locale = useLocale();
+
   const updateQuantity = useCartStore((s) => s.updateQuantity);
   const removeItem = useCartStore((s) => s.removeItem);
+
+  // 로케일에 따른 가격 및 기호 설정
+  const isKo = locale === "ko";
+  const unitPrice = isKo ? item.product.priceKRW : item.product.priceUSD;
+  const totalPrice = unitPrice * item.quantity;
+  const currencySymbol = isKo ? "₩" : "$";
 
   return (
     <div className="flex gap-6 py-6 border-b border-border">
@@ -20,7 +30,7 @@ export default function CartItemRow({ item }: { item: CartItem }) {
       >
         <Image
           src={item.product.image}
-          alt={item.product.name}
+          alt={p(`${item.product.slug}.name`)}
           fill
           className="object-cover"
           sizes="96px"
@@ -34,10 +44,10 @@ export default function CartItemRow({ item }: { item: CartItem }) {
             href={`/shop/${item.product.slug}`}
             className="font-heading text-lg font-light hover:text-accent transition-colors"
           >
-            {item.product.name}
+            {p(`${item.product.slug}.name`)}
           </Link>
           <p className="text-xs uppercase tracking-[0.2em] text-ink-soft mt-1">
-            {item.product.category} · {item.product.size}
+            {c(item.product.category)} · {item.product.size}
           </p>
         </div>
 
@@ -46,7 +56,7 @@ export default function CartItemRow({ item }: { item: CartItem }) {
             value={item.quantity}
             onChange={(v) => updateQuantity(item.product.slug, v)}
             max={item.product.stock}
-            label={item.product.name}
+            label={p(`${item.product.slug}.name`)}
           />
           <button
             onClick={() => removeItem(item.product.slug)}
@@ -61,11 +71,14 @@ export default function CartItemRow({ item }: { item: CartItem }) {
       {/* Price */}
       <div className="text-right shrink-0">
         <p className="text-sm">
-          ${item.product.priceUSD * item.quantity}
+          {currencySymbol}
+          {totalPrice.toLocaleString()}
         </p>
         {item.quantity > 1 && (
           <p className="text-xs text-ink-soft mt-1">
-            ${item.product.priceUSD} each
+            {isKo
+              ? `개당 ${currencySymbol}${unitPrice.toLocaleString()}`
+              : `${currencySymbol}${unitPrice.toLocaleString()} each`}
           </p>
         )}
       </div>

@@ -1,33 +1,45 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { useCartStore } from "@/lib/stores/cart";
 import { useEffect, useState } from "react";
 
 export default function CartSummary() {
   const t = useTranslations("cart");
-  const [totalPrice, setTotalPrice] = useState(0);
+  const locale = useLocale();
+  const [total, setTotal] = useState(0);
+
+  const isKo = locale === "ko";
+  const currencySymbol = isKo ? "₩" : "$";
 
   useEffect(() => {
-    setTotalPrice(useCartStore.getState().totalPrice());
+    // 로케일에 따라 스토어의 원화/달러 총액 계산 함수를 선택
+    const calculateTotal = (
+      state: ReturnType<typeof useCartStore.getState>,
+    ) => {
+      return isKo ? state.totalPriceKRW() : state.totalPrice();
+    };
 
+    // 초기 마운트 시 총액 설정
+    setTotal(calculateTotal(useCartStore.getState()));
+
+    // 스토어 상태 변경 시 총액 업데이트
     const unsub = useCartStore.subscribe((state) => {
-      const total = state.items.reduce(
-        (sum, item) => sum + item.product.priceUSD * item.quantity,
-        0
-      );
-      setTotalPrice(total);
+      setTotal(calculateTotal(state));
     });
     return unsub;
-  }, []);
+  }, [isKo]);
 
   return (
     <div className="bg-bg-alt p-8">
       <div className="space-y-4">
         <div className="flex justify-between text-sm">
           <span className="text-ink-soft">{t("subtotal")}</span>
-          <span>${totalPrice}</span>
+          <span>
+            {currencySymbol}
+            {total.toLocaleString()}
+          </span>
         </div>
         <div className="flex justify-between text-sm">
           <span className="text-ink-soft">{t("shipping")}</span>
@@ -35,7 +47,10 @@ export default function CartSummary() {
         </div>
         <div className="pt-4 border-t border-border flex justify-between text-base">
           <span>{t("total")}</span>
-          <span className="font-heading text-xl font-light">${totalPrice}</span>
+          <span className="font-heading text-xl font-light">
+            {currencySymbol}
+            {total.toLocaleString()}
+          </span>
         </div>
       </div>
       <Link

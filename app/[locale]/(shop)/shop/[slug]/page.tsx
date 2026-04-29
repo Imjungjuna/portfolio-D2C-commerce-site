@@ -1,9 +1,6 @@
 import { notFound } from "next/navigation";
 import { getTranslations, getLocale } from "next-intl/server";
-import {
-  getProductBySlug,
-  products,
-} from "@/lib/data/products";
+import { getProductBySlug, products } from "@/lib/data/products";
 import ImageGallery from "@/components/product/ImageGallery";
 import AddToCartButton from "@/components/product/AddToCartButton";
 import ProductAccordion from "@/components/product/ProductAccordion";
@@ -72,7 +69,7 @@ export default async function ProductPage({
               {/* Price */}
               <p className="text-xl font-light">
                 {locale === "ko"
-                  ? `₩${product.priceKRW.toLocaleString()}`
+                  ? `₩${product.priceKRW}`
                   : `$${product.priceUSD}`}
               </p>
 
@@ -94,7 +91,10 @@ export default async function ProductPage({
 
               {/* Accordion */}
               <div className="mt-4 border-t border-border pt-4">
-                <ProductAccordion product={product} description={productDescription} />
+                <ProductAccordion
+                  product={product}
+                  description={productDescription}
+                />
               </div>
             </div>
           </div>
