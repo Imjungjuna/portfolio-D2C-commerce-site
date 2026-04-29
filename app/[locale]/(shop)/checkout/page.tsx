@@ -1,14 +1,16 @@
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import CheckoutWidget from "@/components/checkout/CheckoutWidget";
 
-export default function CheckoutPage() {
-  const t = useTranslations("checkout");
+export default async function CheckoutPage() {
+  const t = await getTranslations("checkout");
 
   return (
-    <section className="py-24 md:py-32">
-      <div className="mx-auto max-w-7xl px-6">
-        <h1 className="font-heading text-5xl md:text-7xl font-light tracking-tight">
+    <section className="py-16 md:py-24">
+      <div className="mx-auto max-w-7xl md:px-6">
+        <h1 className="font-heading text-2xl md:text-5xl font-light tracking-tight mb-12">
           {t("title")}
         </h1>
+        <CheckoutWidget />
       </div>
     </section>
   );

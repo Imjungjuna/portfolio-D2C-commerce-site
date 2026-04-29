@@ -12,7 +12,7 @@ export default function StorySection() {
           {/* Image */}
           <div className="relative aspect-4/5 overflow-hidden">
             <Image
-              src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=960&q=80"
+              src="/root-page/hero-image.png"
               alt="Potter shaping clay on a wheel in the studio"
               fill
               className="object-cover"

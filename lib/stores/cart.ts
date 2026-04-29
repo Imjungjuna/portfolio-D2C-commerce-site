@@ -17,6 +17,7 @@ interface CartState {
   clearCart: () => void;
   totalItems: () => number;
   totalPrice: () => number;
+  totalPriceKRW: () => number;
 }
 
 export const useCartStore = create<CartState>()(
@@ -70,6 +71,12 @@ export const useCartStore = create<CartState>()(
       totalPrice: () =>
         get().items.reduce(
           (sum, item) => sum + item.product.priceUSD * item.quantity,
+          0
+        ),
+
+      totalPriceKRW: () =>
+        get().items.reduce(
+          (sum, item) => sum + item.product.priceKRW * item.quantity,
           0
         ),
     }),

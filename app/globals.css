@@ -43,8 +43,8 @@
   --color-border: var(--border);
 
   /* Typography */
-  --font-heading: "Cormorant Garamond", serif;
-  --font-body: "Inter", "Pretendard", sans-serif;
+  --font-heading: var(--font-heading), var(--font-noto-serif), serif;
+  --font-body: var(--font-body), sans-serif;
 
   /* shadcn theme mapping */
   --color-background: var(--background);

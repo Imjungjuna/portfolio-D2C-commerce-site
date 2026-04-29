@@ -10,9 +10,9 @@ export default async function AboutPage() {
     <article>
       <ScrollToHash />
       {/* Hero */}
-      <section className="relative h-[60vh] min-h-[400px]">
+      <section className="relative h-[60vh] min-h-100">
         <Image
-          src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=1920&q=80"
+          src="/root-page/hero-image.png"
           alt="Ceramic vessels arranged on a wooden shelf in warm light"
           fill
           priority

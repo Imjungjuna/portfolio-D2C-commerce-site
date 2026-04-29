@@ -35,8 +35,8 @@
   },
   "home": {
     "hero": {
-      "title": "서울 공방의 느린 도자기.",
-      "subtitle": "한국 전통에 뿌리를 둔 수공예 그릇, 현대의 일상을 위해 만듭니다.",
+      "title": "시간이 빚어낸, 일상의 예술.",
+      "subtitle": "서울 공방에서 기다림으로 구워낸 현대적 전통 그릇.",
       "cta": "컬렉션 보기"
     },
     "featured": "추천 컬렉션",
@@ -120,16 +120,23 @@
   },
   "checkout": {
     "title": "결제",
-    "shipping": "배송 정보",
-    "payment": "결제 수단",
     "placeOrder": "주문하기",
-    "firstName": "이름",
-    "lastName": "성",
-    "email": "이메일",
-    "address": "주소",
-    "city": "도시",
-    "country": "국가",
-    "postalCode": "우편번호"
+    "orderSummary": "주문 요약",
+    "subtotal": "소계",
+    "shipping": "배송비",
+    "shippingCalc": "다음 단계에서 계산",
+    "total": "합계",
+    "qty": "수량",
+    "emptyCart": "장바구니가 비어있습니다",
+    "confirmed": "주문 완료",
+    "thankYou": "주문해 주셔서 감사합니다",
+    "orderNumber": "주문번호",
+    "confirmationMessage": "주문 내역이 포함된 확인 이메일을 곧 보내드리겠습니다.",
+    "continueShopping": "쇼핑 계속하기",
+    "paymentFailed": "결제 실패",
+    "error": "오류",
+    "errorCode": "오류 코드",
+    "tryAgain": "다시 시도"
   },
   "about": {
     "title": "윤도 소개",

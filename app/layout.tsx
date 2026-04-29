@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Yundo Ceramics",
-  description: "Handcrafted Korean ceramics — bowls, cups, vases, and plates",
+  title: "윤도",
+  description: "수제 한국 도자기 — 그릇, 컵, 화병, 접시",
 };
 
 export default function RootLayout({
