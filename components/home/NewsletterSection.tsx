@@ -6,7 +6,9 @@ import { useState } from "react";
 export default function NewsletterSection() {
   const t = useTranslations("home.newsletter");
   const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -28,10 +30,10 @@ export default function NewsletterSection() {
   return (
     <section className="py-24 md:py-32 bg-bg-alt">
       <div className="mx-auto max-w-3xl px-6 text-center">
-        <h2 className="font-heading text-2xl md:text-5xl font-light mb-4">
+        <h2 className="font-heading text-2xl md:text-4xl font-light mb-4">
           {t("heading")}
         </h2>
-        <p className="text-base text-ink-soft leading-relaxed mb-10 max-w-lg mx-auto">
+        <p className="text-base text-ink-soft leading-relaxed mb-16 max-w-lg mx-auto">
           {t("description")}
         </p>
         <form

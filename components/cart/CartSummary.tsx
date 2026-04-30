@@ -43,11 +43,11 @@ export default function CartSummary() {
         </div>
         <div className="flex justify-between text-sm">
           <span className="text-ink-soft">{t("shipping")}</span>
-          <span className="text-ink-soft text-xs">{t("shippingNote")}</span>
+          <span className="text-ink-soft text-sm">{t("shippingNote")}</span>
         </div>
         <div className="pt-4 border-t border-border flex justify-between text-base">
           <span>{t("total")}</span>
-          <span className="font-heading text-xl font-light">
+          <span className="text-base font-light">
             {currencySymbol}
             {total.toLocaleString()}
           </span>
@@ -55,7 +55,7 @@ export default function CartSummary() {
       </div>
       <Link
         href="/checkout"
-        className="block w-full mt-8 py-4 bg-ink text-bg text-center text-xs uppercase tracking-[0.2em] hover:bg-ink-soft transition-colors"
+        className="block w-full mt-8 py-4 bg-ink text-bg text-center text-base uppercase tracking-[0.2em] hover:bg-ink-soft transition-colors"
         aria-label={t("checkout")}
       >
         {t("checkout")}

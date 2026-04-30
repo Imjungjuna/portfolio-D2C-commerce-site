@@ -16,13 +16,13 @@ export default function StorySection() {
               alt="Potter shaping clay on a wheel in the studio"
               fill
               className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes="(max-width: 768px) 100vw, 30vw"
             />
           </div>
 
           {/* Text */}
           <div>
-            <h2 className="font-heading text-2xl md:text-5xl font-light mb-8">
+            <h2 className="font-heading text-2xl md:text-4xl font-light mb-8">
               {t("heading")}
             </h2>
             <div className="space-y-6 text-base leading-relaxed text-ink-soft">

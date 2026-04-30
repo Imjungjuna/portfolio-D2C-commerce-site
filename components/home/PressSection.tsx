@@ -1,12 +1,6 @@
 import { useTranslations } from "next-intl";
 
-const publications = [
-  "MONOCLE",
-  "KINFOLK",
-  "CEREAL",
-  "WALLPAPER*",
-  "DWELL",
-];
+const publications = ["MONOCLE", "KINFOLK", "CEREAL", "WALLPAPER*", "DWELL"];
 
 export default function PressSection() {
   const t = useTranslations("home.press");
@@ -14,7 +8,7 @@ export default function PressSection() {
   return (
     <section className="py-16 md:py-24 border-y border-border">
       <div className="mx-auto max-w-7xl px-6">
-        <p className="text-xs uppercase tracking-[0.2em] text-ink-soft text-center mb-10">
+        <p className="text-2xl font-heading md:text-4xl uppercase text-ink-soft text-center mb-10">
           {t("heading")}
         </p>
         <div className="flex flex-wrap items-center justify-center gap-10 md:gap-16">

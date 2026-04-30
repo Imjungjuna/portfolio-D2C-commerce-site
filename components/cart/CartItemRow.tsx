@@ -1,10 +1,12 @@
 "use client";
 
 import { useTranslations, useLocale } from "next-intl";
+
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { useCartStore, type CartItem } from "@/lib/stores/cart";
 import QuantityStepper from "@/components/product/QuantityStepper";
+import { Trash2 } from "lucide-react";
 
 export default function CartItemRow({ item }: { item: CartItem }) {
   const t = useTranslations("cart");
@@ -42,11 +44,11 @@ export default function CartItemRow({ item }: { item: CartItem }) {
         <div>
           <Link
             href={`/shop/${item.product.slug}`}
-            className="font-heading text-lg font-light hover:text-accent transition-colors"
+            className="font-heading text-sm md:text-lg font-light hover:text-accent transition-colors"
           >
             {p(`${item.product.slug}.name`)}
           </Link>
-          <p className="text-xs uppercase tracking-[0.2em] text-ink-soft mt-1">
+          <p className="font-heading text-xs uppercase font-medium tracking-widest text-ink-soft mt-1">
             {c(item.product.category)} · {item.product.size}
           </p>
         </div>
@@ -58,29 +60,34 @@ export default function CartItemRow({ item }: { item: CartItem }) {
             max={item.product.stock}
             label={p(`${item.product.slug}.name`)}
           />
-          <button
-            onClick={() => removeItem(item.product.slug)}
-            className="text-xs uppercase tracking-[0.2em] text-ink-soft hover:text-ink transition-colors"
-            aria-label={`${t("remove")} ${item.product.name}`}
-          >
-            {t("remove")}
-          </button>
         </div>
       </div>
 
       {/* Price */}
-      <div className="text-right shrink-0">
-        <p className="text-sm">
-          {currencySymbol}
-          {totalPrice.toLocaleString()}
-        </p>
-        {item.quantity > 1 && (
-          <p className="text-xs text-ink-soft mt-1">
-            {isKo
-              ? `개당 ${currencySymbol}${unitPrice.toLocaleString()}`
-              : `${currencySymbol}${unitPrice.toLocaleString()} each`}
+      <div className="flex flex-col text-right shrink-0 justify-between">
+        <div>
+          <button
+            onClick={() => removeItem(item.product.slug)}
+            className="text-xs uppercase tracking-[0.2em] hover:text-ink transition-colors"
+            aria-label={`${t("remove")} ${item.product.name}`}
+          >
+            {/* {t("remove")} */}
+            <Trash2 strokeWidth={1} color="var(--ink-soft)" />
+          </button>
+        </div>
+        <div>
+          <p className="text-sm">
+            {currencySymbol}
+            {totalPrice.toLocaleString()}
           </p>
-        )}
+          {item.quantity > 1 && (
+            <p className="text-xs text-ring mt-1">
+              {isKo
+                ? `개당 ${currencySymbol}${unitPrice.toLocaleString()}`
+                : `${currencySymbol}${unitPrice.toLocaleString()} each`}
+            </p>
+          )}
+        </div>
       </div>
     </div>
   );

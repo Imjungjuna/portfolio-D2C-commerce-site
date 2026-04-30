@@ -6,11 +6,7 @@ import { useState, useEffect, useCallback, useMemo } from "react";
 import type { Product } from "@/lib/data/products";
 import ProductCard from "@/components/product/ProductCard";
 
-export default function FeaturedSection({
-  products,
-}: {
-  products: Product[];
-}) {
+export default function FeaturedSection({ products }: { products: Product[] }) {
   const t = useTranslations("home");
   const [itemsPerView, setItemsPerView] = useState(4);
   const [paused, setPaused] = useState(false);
@@ -18,7 +14,7 @@ export default function FeaturedSection({
   // Triple the list so there's always room in both directions
   const allItems = useMemo(
     () => [...products, ...products, ...products],
-    [products]
+    [products],
   );
 
   // Start in the middle set
@@ -26,8 +22,7 @@ export default function FeaturedSection({
   const [animated, setAnimated] = useState(true);
 
   useEffect(() => {
-    const update = () =>
-      setItemsPerView(window.innerWidth < 768 ? 2 : 3);
+    const update = () => setItemsPerView(window.innerWidth < 768 ? 2 : 3);
     update();
     window.addEventListener("resize", update);
     return () => window.removeEventListener("resize", update);
@@ -37,9 +32,7 @@ export default function FeaturedSection({
     setAnimated(false);
     setCurrentIndex(index);
     // re-enable animation on next frame
-    requestAnimationFrame(() =>
-      requestAnimationFrame(() => setAnimated(true))
-    );
+    requestAnimationFrame(() => requestAnimationFrame(() => setAnimated(true)));
   }, []);
 
   const next = useCallback(() => {
@@ -79,7 +72,7 @@ export default function FeaturedSection({
     <section className="py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex items-end justify-between mb-20">
-          <h2 className="font-heading text-2xl md:text-5xl font-light">
+          <h2 className="font-heading text-2xl md:text-4xl font-light">
             {t("featured")}
           </h2>
           <Link
@@ -110,9 +103,7 @@ export default function FeaturedSection({
               className="flex"
               style={{
                 transform: `translateX(-${currentIndex * cardWidth}%)`,
-                transition: animated
-                  ? "transform 500ms ease-in-out"
-                  : "none",
+                transition: animated ? "transform 500ms ease-in-out" : "none",
               }}
             >
               {allItems.map((product, i) => (

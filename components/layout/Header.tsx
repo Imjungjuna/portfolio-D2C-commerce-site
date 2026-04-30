@@ -16,7 +16,7 @@ import {
 export default function Header() {
   const t = useTranslations("common");
   const pathname = usePathname();
-  const [scrollY, setScrollY] = useState(0);
+  // const [scrollY, setScrollY] = useState(0);
   const [cartCount, setCartCount] = useState(0);
 
   const handleLogoClick = useCallback(
@@ -35,7 +35,7 @@ export default function Header() {
       }
       requestAnimationFrame(step);
     },
-    [pathname]
+    [pathname],
   );
 
   useEffect(() => {
@@ -48,13 +48,13 @@ export default function Header() {
     return unsub;
   }, []);
 
-  useEffect(() => {
-    function onScroll() {
-      setScrollY(window.scrollY);
-    }
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  // useEffect(() => {
+  //   function onScroll() {
+  //     setScrollY(window.scrollY);
+  //   }
+  //   window.addEventListener("scroll", onScroll, { passive: true });
+  //   return () => window.removeEventListener("scroll", onScroll);
+  // }, []);
 
   const navLinks = (
     <>
@@ -73,19 +73,19 @@ export default function Header() {
     </>
   );
 
-  const bgOpacity = Math.min(scrollY / 80, 1);
+  // const bgOpacity = Math.min(scrollY / 80, 1);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
       {/* Smooth background layer — fades in over first 80px of scroll */}
       <div
         className="absolute inset-0 bg-bg/95 backdrop-blur-sm"
-        style={{ opacity: bgOpacity }}
+        // style={{ opacity: bgOpacity }}
       />
       {/* Border bottom */}
       <div
         className="absolute bottom-0 inset-x-0 h-px bg-border"
-        style={{ opacity: bgOpacity }}
+        // style={{ opacity: bgOpacity }}
       />
       <div className="relative z-10 mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
         {/* Mobile menu */}
@@ -114,7 +114,7 @@ export default function Header() {
             </SheetTrigger>
             <SheetContent side="left" className="w-72 bg-bg">
               <SheetTitle className="sr-only">{t("nav.menu")}</SheetTitle>
-              <nav className="flex flex-col gap-8 mt-12 px-2">
+              <nav className="flex flex-col gap-8 mt-12 px-4">
                 <SheetClose
                   nativeButton={false}
                   render={
