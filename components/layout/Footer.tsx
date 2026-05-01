@@ -1,10 +1,10 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import React from "react";
+import React, { memo } from "react";
 
 const linkClasses = "text-sm text-ink transition-colors";
 const headingClasses =
-  "text-lg font-medium uppercase tracking-widest font-heading mb-6 text-ink";
+  "text-lg font-medium uppercase tracking-widest font-heading mb-2 md:mb-6 text-ink";
 
 const shopLinks = [
   { href: "/shop?category=bowls", key: "bowls" },
@@ -26,19 +26,19 @@ const bottomLinks = [
   { href: "/terms", key: "terms" },
 ];
 
-export default function Footer() {
+const Footer = memo(function Footer() {
   const t = useTranslations("common.footer");
 
   return (
     <footer className="border-t border-border">
-      <div className="mx-auto max-w-7xl px-6 py-16 md:py-16">
-        <div className="grid grid-cols-2 md:grid-cols-2 gap-12 md:gap-8">
+      <div className="mx-auto max-w-7xl px-6 py-12 md:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-8">
           <div className="max-w-md">
-            <div className="grid grid-cols-3">
+            <nav className="grid grid-cols-2 md:grid-cols-3">
               {/* Shop */}
               <div>
                 <h3 className={headingClasses}>{t("shopHeading")}</h3>
-                <ul className="space-y-0">
+                <ul className="mb-8 md:mb-0">
                   {shopLinks.map((link) => (
                     <li key={link.key}>
                       <Link href={link.href} className={linkClasses}>
@@ -52,7 +52,7 @@ export default function Footer() {
               {/* About */}
               <div>
                 <h3 className={headingClasses}>{t("aboutHeading")}</h3>
-                <ul className="space-y-0">
+                <ul>
                   {aboutLinks.map((link) => (
                     <li key={link.key}>
                       <Link href={link.href} className={linkClasses}>
@@ -66,7 +66,7 @@ export default function Footer() {
               {/* Contact */}
               <div>
                 <h3 className={headingClasses}>{t("contactHeading")}</h3>
-                <ul className="space-y-0">
+                <ul>
                   {contactItems.map((item) => (
                     <li key={item}>
                       <span className={linkClasses}>{t(item)}</span>
@@ -74,10 +74,10 @@ export default function Footer() {
                   ))}
                 </ul>
               </div>
-            </div>
+            </nav>
           </div>
 
-          <div className="space-y-0">
+          <div>
             <p className="ml-auto w-fit text-7xl font-light text-ink-soft tracking-wider font-heading">
               Yundo.
             </p>
@@ -86,7 +86,6 @@ export default function Footer() {
                 {bottomLinks.map((link, index) => (
                   <React.Fragment key={link.key}>
                     <Link
-                      key={link.key}
                       href={link.href}
                       className="text-xs text-ink-soft hover:text-ink transition-colors"
                     >
@@ -107,4 +106,6 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+});
+
+export default Footer;
