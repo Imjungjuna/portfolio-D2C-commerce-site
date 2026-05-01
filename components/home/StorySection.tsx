@@ -16,7 +16,7 @@ export default function StorySection() {
               alt="Potter shaping clay on a wheel in the studio"
               fill
               className="object-cover"
-              sizes="(max-width: 768px) 100vw, 30vw"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
 
