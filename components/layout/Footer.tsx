@@ -19,8 +19,6 @@ const aboutLinks = [
   { href: "/about#studio", key: "studio" },
 ];
 
-const contactItems = ["email", "instagram", "location"];
-
 const bottomLinks = [
   { href: "/privacy", key: "privacy" },
   { href: "/terms", key: "terms" },
@@ -67,11 +65,115 @@ const Footer = memo(function Footer() {
               <div>
                 <h3 className={headingClasses}>{t("contactHeading")}</h3>
                 <ul>
-                  {contactItems.map((item) => (
-                    <li key={item}>
-                      <span className={linkClasses}>{t(item)}</span>
-                    </li>
-                  ))}
+                  <li>
+                    <a
+                      href="mailto:hello@yundoceramics.com"
+                      className={linkClasses}
+                    >
+                      {t("email")}
+                    </a>
+                  </li>
+                  <li className="mt-1 flex items-center gap-2">
+                    {/* Instagram */}
+                    <a
+                      href="https://instagram.com/yundo.ceramics"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-ink-soft hover:text-ink transition-colors"
+                      aria-label="Instagram"
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <rect x="2" y="2" width="20" height="20" rx="5" />
+                        <circle cx="12" cy="12" r="5" />
+                        <circle
+                          cx="17.5"
+                          cy="6.5"
+                          r="1"
+                          fill="currentColor"
+                          stroke="none"
+                        />
+                      </svg>
+                    </a>
+                    {/* YouTube */}
+                    <a
+                      href="https://youtube.com/@yundoceramics"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-ink-soft hover:text-ink transition-colors"
+                      aria-label="YouTube"
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <rect x="2" y="4" width="20" height="16" rx="4" />
+                        <polygon
+                          points="10,8.5 16,12 10,15.5"
+                          fill="currentColor"
+                          stroke="none"
+                        />
+                      </svg>
+                    </a>
+                    {/* KakaoTalk */}
+                    <a
+                      href="https://pf.kakao.com/yundoceramics"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-ink-soft hover:text-ink transition-colors"
+                      aria-label="KakaoTalk"
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path d="M12 3C6.477 3 2 6.477 2 10.5c0 2.6 1.7 4.9 4.3 6.2l-.8 3.1 3.5-2.3c1 .2 2 .3 3 .3 5.523 0 10-3.477 10-7.5S17.523 3 12 3Z" />
+                      </svg>
+                    </a>
+                    {/* Facebook */}
+                    <a
+                      href="https://facebook.com/yundoceramics"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-ink-soft hover:text-ink transition-colors"
+                      aria-label="Facebook"
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M15.5 8.5H14c-1.1 0-2 .9-2 2V22" fill="none" />
+                        <path d="M9 13h6" />
+                      </svg>
+                    </a>
+                  </li>
                 </ul>
               </div>
             </nav>
