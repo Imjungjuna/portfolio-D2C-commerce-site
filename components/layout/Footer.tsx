@@ -2,9 +2,10 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import React, { memo } from "react";
 
-const linkClasses = "text-sm text-ink transition-colors";
+const linkClasses = "text-sm text-ink hover:text-ink-soft transition-colors";
 const headingClasses =
   "text-lg font-medium uppercase tracking-widest font-heading mb-0 md:mb-4 text-ink";
+const logoClasses = "text-ink hover:text-ink-soft transition-colors";
 
 const shopLinks = [
   { href: "/shop?category=bowls", key: "bowls" },
@@ -77,7 +78,7 @@ const Footer = memo(function Footer() {
                     {/* Instagram */}
                     <Link
                       href="/sns"
-                      className="text-ink-soft hover:text-ink transition-colors"
+                      className={logoClasses}
                       aria-label="Instagram"
                     >
                       <svg
@@ -104,7 +105,7 @@ const Footer = memo(function Footer() {
                     {/* YouTube */}
                     <Link
                       href="/sns"
-                      className="text-ink-soft hover:text-ink transition-colors"
+                      className={logoClasses}
                       aria-label="YouTube"
                     >
                       <svg
@@ -128,7 +129,7 @@ const Footer = memo(function Footer() {
                     {/* KakaoTalk */}
                     <Link
                       href="/sns"
-                      className="text-ink-soft hover:text-ink transition-colors"
+                      className={logoClasses}
                       aria-label="KakaoTalk"
                     >
                       <svg
@@ -147,7 +148,7 @@ const Footer = memo(function Footer() {
                     {/* Facebook */}
                     <Link
                       href="/sns"
-                      className="text-ink-soft hover:text-ink transition-colors -translate-y-px"
+                      className={logoClasses}
                       aria-label="Facebook"
                     >
                       <svg
@@ -181,7 +182,7 @@ const Footer = memo(function Footer() {
                   <React.Fragment key={link.key}>
                     <Link
                       href={link.href}
-                      className="text-xs text-ink hover:text-ink-soft transition-colors"
+                      className="text-xs text-ink hover:text-ink-soft transition-colors tracking-wider"
                     >
                       {t(link.key)}
                     </Link>
@@ -192,7 +193,7 @@ const Footer = memo(function Footer() {
                 ))}
               </div>
             </div>
-            <p className="w-fit ml-auto text-ink text-xs hover:text-ink-soft">
+            <p className="w-fit ml-auto text-ink text-xs tracking-wide">
               {t("copyright")}
             </p>
           </div>

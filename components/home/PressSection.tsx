@@ -16,12 +16,12 @@ export default function PressSection() {
 
   return (
     <section className="py-16 md:py-24 border-y border-border">
-      <p className="text-2xl font-heading md:text-4xl uppercase text-ink-soft text-center mb-16 px-6">
+      <p className="text-2xl font-heading md:text-4xl uppercase text-ink-soft text-center mb-8 md:mb-16 px-6">
         {t("heading")}
       </p>
       <div className="overflow-hidden">
         <div
-          className="flex items-center gap-16 md:gap-24 w-max"
+          className="flex items-center gap-12 md:gap-24 w-max"
           style={{ animation: "marquee 30s linear infinite" }}
         >
           {items}
