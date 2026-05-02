@@ -172,7 +172,7 @@ const Footer = memo(function Footer() {
             </nav>
           </div>
 
-          <div>
+          <div className="-translate-y-0.5">
             <p className="ml-auto w-fit text-7xl font-light text-ink-soft tracking-wider font-heading">
               Yundo.
             </p>

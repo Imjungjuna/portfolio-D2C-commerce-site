@@ -6,30 +6,30 @@
 
 :root {
   /* Brand tokens */
-  --bg: #FAF8F4;
-  --bg-alt: #F0EBE3;
-  --ink: #1A1A1A;
-  --ink-soft: #4A4A4A;
-  --accent: #8B6F47;
-  --border: #E5DFD3;
+  --bg: #faf8f4;
+  --bg-alt: #f0ebe3;
+  --ink: #1a1a1a;
+  --ink-soft: #4a4a4a;
+  --accent: #8b6f47;
+  --border: #e5dfd3;
 
   /* shadcn tokens — mapped to brand palette */
-  --background: #FAF8F4;
-  --foreground: #1A1A1A;
-  --card: #FFFFFF;
-  --card-foreground: #1A1A1A;
-  --popover: #FFFFFF;
-  --popover-foreground: #1A1A1A;
-  --primary: #1A1A1A;
-  --primary-foreground: #FAF8F4;
-  --secondary: #F0EBE3;
-  --secondary-foreground: #1A1A1A;
-  --muted: #F0EBE3;
-  --muted-foreground: #4A4A4A;
-  --accent-foreground: #1A1A1A;
+  --background: #faf8f4;
+  --foreground: #1a1a1a;
+  --card: #ffffff;
+  --card-foreground: #1a1a1a;
+  --popover: #ffffff;
+  --popover-foreground: #1a1a1a;
+  --primary: #1a1a1a;
+  --primary-foreground: #faf8f4;
+  --secondary: #f0ebe3;
+  --secondary-foreground: #1a1a1a;
+  --muted: #f0ebe3;
+  --muted-foreground: #4a4a4a;
+  --accent-foreground: #1a1a1a;
   --destructive: oklch(0.577 0.245 27.325);
-  --input: #E5DFD3;
-  --ring: #8B6F47;
+  --input: #e5dfd3;
+  --ring: #8b6f47;
   --radius: 0.375rem;
 }
 
@@ -85,7 +85,10 @@ body {
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border outline-ring/60;
+  }
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-ring/60;
   }
 }
 
