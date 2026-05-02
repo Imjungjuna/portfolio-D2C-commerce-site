@@ -5,21 +5,27 @@ const publications = ["MONOCLE", "KINFOLK", "CEREAL", "WALLPAPER*", "DWELL"];
 export default function PressSection() {
   const t = useTranslations("home.press");
 
+  const items = publications.map((name) => (
+    <span
+      key={name}
+      className="font-heading text-3xl md:text-6xl font-light text-ink-soft/40 tracking-wide select-none whitespace-nowrap"
+    >
+      {name}
+    </span>
+  ));
+
   return (
     <section className="py-16 md:py-24 border-y border-border">
-      <div className="mx-auto max-w-7xl px-6">
-        <p className="text-2xl font-heading md:text-4xl uppercase text-ink-soft text-center mb-10">
-          {t("heading")}
-        </p>
-        <div className="flex flex-wrap items-center justify-center gap-10 md:gap-16">
-          {publications.map((name) => (
-            <span
-              key={name}
-              className="font-heading text-base md:text-2xl font-light text-ink-soft/40 tracking-wide select-none"
-            >
-              {name}
-            </span>
-          ))}
+      <p className="text-2xl font-heading md:text-4xl uppercase text-ink-soft text-center mb-16 px-6">
+        {t("heading")}
+      </p>
+      <div className="overflow-hidden">
+        <div
+          className="flex items-center gap-16 md:gap-24 w-max"
+          style={{ animation: "marquee 30s linear infinite" }}
+        >
+          {items}
+          {items}
         </div>
       </div>
     </section>

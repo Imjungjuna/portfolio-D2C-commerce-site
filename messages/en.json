@@ -182,6 +182,11 @@
     "description": "The page you're looking for doesn't exist or has been moved.",
     "cta": "Return home"
   },
+  "sns": {
+    "heading": "SNS Coming Soon",
+    "description": "This is a portfolio demo site. Actual social media accounts do not exist.",
+    "cta": "Return Home"
+  },
   "products": {
     "moon-jar-bowl": {
       "name": "Moon Jar Bowl",

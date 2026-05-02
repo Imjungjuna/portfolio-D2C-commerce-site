@@ -88,3 +88,12 @@ body {
     @apply border-border outline-ring/50;
   }
 }
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

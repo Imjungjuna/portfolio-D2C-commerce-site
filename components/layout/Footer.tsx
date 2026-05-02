@@ -4,7 +4,7 @@ import React, { memo } from "react";
 
 const linkClasses = "text-sm text-ink transition-colors";
 const headingClasses =
-  "text-lg font-medium uppercase tracking-widest font-heading mb-2 md:mb-6 text-ink";
+  "text-lg font-medium uppercase tracking-widest font-heading mb-0 md:mb-4 text-ink";
 
 const shopLinks = [
   { href: "/shop?category=bowls", key: "bowls" },
@@ -73,12 +73,10 @@ const Footer = memo(function Footer() {
                       {t("email")}
                     </a>
                   </li>
-                  <li className="mt-1 flex items-center gap-2">
+                  <li className="mt-1 flex items-center gap-3">
                     {/* Instagram */}
-                    <a
-                      href="https://instagram.com/yundo.ceramics"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <Link
+                      href="/sns"
                       className="text-ink-soft hover:text-ink transition-colors"
                       aria-label="Instagram"
                     >
@@ -102,12 +100,10 @@ const Footer = memo(function Footer() {
                           stroke="none"
                         />
                       </svg>
-                    </a>
+                    </Link>
                     {/* YouTube */}
-                    <a
-                      href="https://youtube.com/@yundoceramics"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <Link
+                      href="/sns"
                       className="text-ink-soft hover:text-ink transition-colors"
                       aria-label="YouTube"
                     >
@@ -128,12 +124,10 @@ const Footer = memo(function Footer() {
                           stroke="none"
                         />
                       </svg>
-                    </a>
+                    </Link>
                     {/* KakaoTalk */}
-                    <a
-                      href="https://pf.kakao.com/yundoceramics"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <Link
+                      href="/sns"
                       className="text-ink-soft hover:text-ink transition-colors"
                       aria-label="KakaoTalk"
                     >
@@ -149,13 +143,11 @@ const Footer = memo(function Footer() {
                       >
                         <path d="M12 3C6.477 3 2 6.477 2 10.5c0 2.6 1.7 4.9 4.3 6.2l-.8 3.1 3.5-2.3c1 .2 2 .3 3 .3 5.523 0 10-3.477 10-7.5S17.523 3 12 3Z" />
                       </svg>
-                    </a>
+                    </Link>
                     {/* Facebook */}
-                    <a
-                      href="https://facebook.com/yundoceramics"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-ink-soft hover:text-ink transition-colors"
+                    <Link
+                      href="/sns"
+                      className="text-ink-soft hover:text-ink transition-colors -translate-y-px"
                       aria-label="Facebook"
                     >
                       <svg
@@ -172,7 +164,7 @@ const Footer = memo(function Footer() {
                         <path d="M15.5 8.5H14c-1.1 0-2 .9-2 2V22" fill="none" />
                         <path d="M9 13h6" />
                       </svg>
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -189,18 +181,18 @@ const Footer = memo(function Footer() {
                   <React.Fragment key={link.key}>
                     <Link
                       href={link.href}
-                      className="text-xs text-ink-soft hover:text-ink transition-colors"
+                      className="text-xs text-ink hover:text-ink-soft transition-colors"
                     >
                       {t(link.key)}
                     </Link>
                     {index < bottomLinks.length - 1 && (
-                      <span className="text-ink-soft text-lg">·</span>
+                      <span className="text-lg">·</span>
                     )}
                   </React.Fragment>
                 ))}
               </div>
             </div>
-            <p className="w-fit ml-auto pt-0.5 text-xs text-ink-soft">
+            <p className="w-fit ml-auto text-ink text-xs hover:text-ink-soft">
               {t("copyright")}
             </p>
           </div>
