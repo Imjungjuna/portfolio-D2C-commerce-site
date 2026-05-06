@@ -6,9 +6,9 @@ export default function StorySection() {
   const t = useTranslations("home.story");
 
   return (
-    <section className="py-24 md:py-32 bg-bg-alt">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
+    <section className="py-20 md:py-28 bg-bg-alt">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
           {/* Image */}
           <div className="relative aspect-4/5 overflow-hidden">
             <Image
@@ -22,7 +22,7 @@ export default function StorySection() {
 
           {/* Text */}
           <div>
-            <h2 className="font-heading text-2xl md:text-4xl font-light mb-8">
+            <h2 className="font-heading text-xl md:text-3xl font-light mb-6">
               {t("heading")}
             </h2>
             <div className="space-y-6 text-base leading-relaxed text-ink-soft">

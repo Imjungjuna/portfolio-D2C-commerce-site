@@ -15,15 +15,18 @@ export default function HeroSection() {
         priority
         className="object-cover"
         sizes="100vw"
+        loading="eager"
       />
       <div className="absolute inset-0 bg-linear-to-t from-black/50 via-black/10 to-transparent" />
-      <div className="relative z-10 mx-auto max-w-7xl w-full px-6 pb-16 md:pb-24">
-        <h1 className={`font-heading break-keep font-light tracking-tight leading-tight text-4xl text-white max-w-2xl ${
-            locale === 'ko' ? 'md:text-6xl whitespace-pre-line' : 'md:text-7xl'
-          }`}>
+      <div className="relative z-10 mx-auto max-w-6xl w-full px-6 pb-14 md:pb-20">
+        <h1
+          className={`font-heading break-keep font-light tracking-tight leading-tight text-3xl text-white max-w-2xl ${
+            locale === "ko" ? "md:text-5xl whitespace-pre-line" : "md:text-6xl"
+          }`}
+        >
           {t("title")}
         </h1>
-        <p className="mt-4 text-base md:text-lg text-white/80 max-w-lg leading-relaxed">
+        <p className="mt-4 text-sm md:text-base text-white/80 max-w-lg leading-relaxed">
           {t("subtitle")}
         </p>
         <Link

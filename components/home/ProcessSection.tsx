@@ -77,9 +77,9 @@ export default function ProcessSection() {
   const t = useTranslations("home.process");
 
   return (
-    <section className="py-24 md:py-32">
-      <div className="mx-auto max-w-7xl px-6">
-        <h2 className="font-heading text-2xl md:text-4xl font-light text-center mb-16 md:mb-20">
+    <section className="py-20 md:py-28">
+      <div className="mx-auto max-w-6xl px-6">
+        <h2 className="font-heading text-xl md:text-3xl font-light text-center mb-12 md:mb-16">
           {t("heading")}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-0 md:gap-8">
@@ -94,10 +94,10 @@ export default function ProcessSection() {
               <div className="text-xs uppercase tracking-[0.2em] text-ink-soft mb-1">
                 {String(i + 1).padStart(2, "0")}
               </div>
-              <h3 className="font-heading text-base md:text-xl font-light mb-3">
+              <h3 className="font-heading text-sm md:text-lg font-light mb-3">
                 {t(step.key)}
               </h3>
-              <p className="text-sm md:text-base text-ink-soft leading-relaxed">
+              <p className="text-xs md:text-sm text-ink-soft leading-relaxed">
                 {t(`${step.key}Desc`)}
               </p>
             </div>

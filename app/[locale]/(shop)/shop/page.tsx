@@ -38,9 +38,9 @@ export default async function ShopPage({
   const filtered = filterAndSort(category, sort as SortOption);
 
   return (
-    <section className="py-16 md:py-24">
-      <div className="mx-auto max-w-7xl px-6">
-        <h1 className="font-heading text-5xl md:text-7xl font-light tracking-tight mb-12">
+    <section className="py-14 md:py-20">
+      <div className="mx-auto max-w-6xl px-6">
+        <h1 className="font-heading text-4xl md:text-6xl font-light tracking-tight mb-10">
           {t("title")}
         </h1>
 

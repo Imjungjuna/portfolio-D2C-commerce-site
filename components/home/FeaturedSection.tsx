@@ -69,10 +69,10 @@ export default function FeaturedSection({ products }: { products: Product[] }) {
   const cardWidth = 100 / itemsPerView;
 
   return (
-    <section className="py-24 md:py-32">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="flex items-end justify-between mb-20">
-          <h2 className="font-heading text-2xl md:text-4xl font-light">
+    <section className="py-20 md:py-28">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="flex items-end justify-between mb-16">
+          <h2 className="font-heading text-xl md:text-3xl font-light">
             {t("featured")}
           </h2>
           <Link

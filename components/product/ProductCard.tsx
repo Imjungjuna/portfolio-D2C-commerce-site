@@ -77,7 +77,7 @@ export default function ProductCard({
         <p className="text-xs uppercase tracking-[0.2em] text-ink-soft">
           {product.category}
         </p>
-        <h3 className="mt-1 font-heading text-lg font-light">
+        <h3 className="mt-1 font-heading text-base font-light">
           {tProducts(`${product.slug}.name`)}
         </h3>
         <p className="mt-1 text-sm text-ink-soft">

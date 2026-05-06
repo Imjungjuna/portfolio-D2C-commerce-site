@@ -28,12 +28,12 @@ export default function NewsletterSection() {
   }
 
   return (
-    <section className="py-24 md:py-32 bg-bg-alt">
-      <div className="mx-auto max-w-3xl px-6 text-center">
-        <h2 className="font-heading text-2xl md:text-4xl font-light mb-4">
+    <section className="py-20 md:py-28 bg-bg-alt">
+      <div className="mx-auto max-w-2xl px-6 text-center">
+        <h2 className="font-heading text-xl md:text-3xl font-light mb-4">
           {t("heading")}
         </h2>
-        <p className="text-base text-ink-soft leading-relaxed mb-16 max-w-lg mx-auto">
+        <p className="text-sm text-ink-soft leading-relaxed mb-12 max-w-lg mx-auto">
           {t("description")}
         </p>
         <form
