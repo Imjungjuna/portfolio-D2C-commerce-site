@@ -1,22 +1,33 @@
+import ReactDOM from "react-dom";
 import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import Image from "next/image";
 
 export default function HeroSection() {
   const t = useTranslations("home.hero");
   const locale = useLocale();
 
+  ReactDOM.preload("/root-page/hero-mobile.webp", {
+    as: "image",
+    media: "(max-width: 767px)",
+    fetchPriority: "high",
+  });
+  ReactDOM.preload("/root-page/hero-desktop.webp", {
+    as: "image",
+    media: "(min-width: 768px)",
+    fetchPriority: "high",
+  });
+
   return (
     <section className="relative h-[calc(100vh-4rem)] min-h-150 flex items-end">
-      <Image
-        src="/root-page/hero-image.png"
-        alt="Handcrafted Korean ceramic vessels on a wooden surface"
-        fill
-        priority
-        className="object-cover"
-        sizes="100vw"
-        loading="eager"
-      />
+      <picture>
+        <source media="(max-width: 767px)" srcSet="/root-page/hero-mobile.webp" />
+        <img
+          src="/root-page/hero-desktop.webp"
+          alt="Handcrafted Korean ceramic vessels on a wooden surface"
+          fetchPriority="high"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      </picture>
       <div className="absolute inset-0 bg-linear-to-t from-black/50 via-black/10 to-transparent" />
       <div className="relative z-10 mx-auto max-w-6xl w-full px-6 pb-14 md:pb-20">
         <h1
