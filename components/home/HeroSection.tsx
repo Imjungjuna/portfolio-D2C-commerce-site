@@ -19,13 +19,13 @@ export default function HeroSection() {
 
   return (
     <section className="relative h-[calc(100vh-4rem)] min-h-150 flex items-end">
-      <picture>
+      <picture className="absolute inset-0 block w-full h-full">
         <source media="(max-width: 767px)" srcSet="/root-page/hero-mobile.webp" />
         <img
           src="/root-page/hero-desktop.webp"
           alt="Handcrafted Korean ceramic vessels on a wooden surface"
           fetchPriority="high"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="w-full h-full object-cover"
         />
       </picture>
       <div className="absolute inset-0 bg-linear-to-t from-black/50 via-black/10 to-transparent" />
