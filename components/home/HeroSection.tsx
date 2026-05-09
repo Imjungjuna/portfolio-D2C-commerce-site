@@ -1,27 +1,27 @@
 import ReactDOM from "react-dom";
 import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
-// import Image from "next/image";
+import Image from "next/image";
 // import { turborepoTraceAccess } from "next/dist/build/turborepo-access-trace";
 
 export default function HeroSection() {
   const t = useTranslations("home.hero");
   const locale = useLocale();
 
-  ReactDOM.preload("/root-page/hero-mobile.webp", {
-    as: "image",
-    media: "(max-width: 767px)",
-    fetchPriority: "high",
-  });
-  ReactDOM.preload("/root-page/hero-desktop.webp", {
-    as: "image",
-    media: "(min-width: 768px)",
-    fetchPriority: "high",
-  });
+  // ReactDOM.preload("/root-page/hero-mobile.webp", {
+  //   as: "image",
+  //   media: "(max-width: 767px)",
+  //   fetchPriority: "high",
+  // });
+  // ReactDOM.preload("/root-page/hero-desktop.webp", {
+  //   as: "image",
+  //   media: "(min-width: 768px)",
+  //   fetchPriority: "high",
+  // });
 
   return (
     <section className="relative h-[calc(100vh-4rem)] min-h-150 flex items-end">
-      <picture className="absolute inset-0 block w-full h-full">
+      {/* <picture className="absolute inset-0 block w-full h-full">
         <source
           media="(max-width: 767px)"
           srcSet="/root-page/hero-mobile.webp"
@@ -32,13 +32,13 @@ export default function HeroSection() {
           fetchPriority="high"
           className="w-full h-full object-cover"
         />
-      </picture>
-      {/* <Image
+      </picture> */}
+      <Image
         src="/root-page/hero-image.png"
         fill={true}
         alt="hero section pic"
         preload={true}
-      /> */}
+      />
       <div className="absolute inset-0 bg-linear-to-t from-black/50 via-black/10 to-transparent" />
       <div className="relative z-10 mx-auto max-w-6xl w-full px-6 pb-14 md:pb-20">
         <h1
