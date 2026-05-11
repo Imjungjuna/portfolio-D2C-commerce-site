@@ -20,10 +20,10 @@ const inter = Inter({
 });
 
 const notoSerifKR = Noto_Serif_KR({
-  weight: ["300", "400", "500", "600"],
+  subsets: ["latin"],
+  weight: ["300"],
   variable: "--font-noto-serif",
   display: "swap",
-  preload: false, // 한글 폰트는 용량이 커서 preload를 끄는 것이 좋음
 });
 
 export default async function LocaleLayout({
